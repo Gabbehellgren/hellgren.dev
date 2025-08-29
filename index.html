@@ -10,14 +10,18 @@
 
 
     <title>hellgren.dev</title>
-    <link rel="icon" type="image/x-icon" href="/hellgren.ico">
+    <link rel="icon" type="image/x-icon" href="assets/hellgren.ico">
 
     <style>
         body{
             font-family: "Montserrat",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: large;
+            font-size: x-large;
             margin: 50px;
-            background-color: rgb(49, 56, 69); /*Background*/
+            /*background-color: rgb(49, 56, 69); /*Background*/
+            background-image: url("assets/backgrundv2.svg");
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
             color: lightgray;
         }
         .links{
@@ -25,8 +29,8 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
-            position: absolute;
-            bottom: 15%;
+            position: fixed;
+            bottom: 10%;
             left: 50%;
             right: 50%;
         }
@@ -34,19 +38,62 @@
             color: lightgray;
             background-color: rgb(80, 124, 196);
             padding: 6px;
+            border: 2px solid rgb(57, 88, 138);
             border-radius: 5px;
             text-decoration: none;
         }
         .projects {
             display: grid;
             grid-template-columns: auto auto;
-            font-size: medium
+            grid-template-rows: repeat(2, auto);
+            font-size: medium;
+            background-color: rgb(74, 81, 93);
+            width: fit-content;
+            padding: 5px;
+            border: 2px solid rgb(44, 48, 55);
+            border-radius: 5px;
+
+            position: fixed;
+
         }
         .buttons{
             margin: 10px;
             font-size: larger;
         }
+        .projectHeader {
+            font-weight: bold;
+            margin-bottom: 7px;
+            border-bottom: 1px solid gray;
+        }
+        .projectName{
+            padding-right: 50px;
+            border-bottom: 1px solid gray;
+            padding-bottom: 5px;
+        }
+        .projectStatus {
+            text-align: center;
+            font-size: small;
+            border-bottom: 1px solid gray;
+            padding: 3px;
+        }
 
+        h4{
+            margin: 5px;
+        }
+        .hero {
+            background: linear-gradient(180deg, #4facfe, #00f2fe);
+            position: relative;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: url("wave.svg") no-repeat bottom;
+            background-size: cover;
+        }
 
     </style>
 
@@ -55,13 +102,12 @@
     <div class="container">
         <div><h1>hellgren.dev</h1></div>
 
-        <div>
-            <h4>Current projects</h4>
+        <div style="position: fixed; top: 30%;">
+            <h4>Active Projects</h4>
             <div class="projects">
-                <div>Project:</div>
-                <div>Status:</div>
-                <div>VEGA</div><div>in development</div><!--project, status-->
-                <div>hellgren.dev</div><div>Main focus</div><!--project, status-->
+                <div class="projectHeader">Project:</div><div class="projectHeader" style="text-align: center;">Status:</div>
+                <div class="projectName">VEGA</div><div class="projectStatus">in development</div><!--project, status-->
+                <div class="projectName">hellgren.dev</div><div class="projectStatus">Main focus</div><!--project, status-->
             </div>
         </div>
         
