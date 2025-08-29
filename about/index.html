@@ -9,52 +9,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 
-    <title>hellgren.dev/about</title>
-    <link rel="icon" type="image/x-icon" href="/hellgren.ico">
+    <title>hellgren.dev</title>
+    <link rel="icon" type="image/x-icon" href="assets/hellgren.ico">
 
     <style>
         body{
             font-family: "Montserrat",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: x-large;
             margin: 50px;
-            background-color: rgb(46, 70, 109);
+            background-color: rgb(49, 56, 69);
             color: lightgray;
         }
-        .links{
 
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            position: absolute;
-            bottom: 15%;
-            left: 50%;
-            right: 50%;
-            
-        }
-        .a1{
-            color: lightgray;
-            background-color: rgb(80, 124, 196);
-            padding: 6px;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        .h1{
+        .headlink {
             color: gray;
-            text-decoration: none;
         }
+        .content{
+            background-color: rgb(74, 81, 93);
+            padding: 10px;
+            border: 2px solid black;
+            position: fixed;
+            left: 0.5fr;
+            display: grid;
+            grid-template-columns: 1024px;
+        }
+        h3{
+            margin: 0;
+        }
+        p{
+            font-size: large;
+            flex-wrap: wrap;
+        }
+
     </style>
 
 </head>
 <body>
     <div class="container">
-        <div><h1 style="font-size: 45px;"><a class="h1" href="/">hellgren.dev</a>/about</h1></div>
-        <div class="links">
-            <div style="margin: 10px">>>></div>
-            <div style="margin: 10px"><a class="a1" href="about">About</a></div>
-            <div style="margin: 10px"><a class="a1" href="projekts">Projects</a></div>
-            <div style="margin: 10px"><a class="a1" href="download">Download</a></div>
-            <div style="margin: 10px"><<<</div>
+        <div><h1><a class="headlink" href="/">hellgren.dev</a>/about</h1></div>
+        <div class="content">
+            <h3>About hellgren.dev</h3>
+            <p>Hi my name is Oscar, in my spare time I like to train, design and code.
+            I own this website and domain hellgren.dev. 
+            This site is going to be used for showcasing my projects, ideas and skills.
+            </p>
         </div>
+        
+        
     </div>
 </body>
 </html>
