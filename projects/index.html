@@ -1,0 +1,142 @@
+<!DOCTYPE html><!--ProjectsPage-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+
+    <title>hellgren.dev</title>
+    <link rel="icon" type="image/x-icon" href="assets/hellgren.ico">
+
+    <style>
+        body{
+            margin: 50px;
+            font-family: 'Montserrat', 'Segoe UI', sans-serif;
+            font-size: medium;
+            color: aliceblue;
+            background: linear-gradient(0deg, #18212C 0%, #3D5FA4 40%, #18212C 100%);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        h1{
+            position: relative;
+        }
+        h1 a{
+            position: relative;
+            color: rgb(164, 170, 176);
+        }
+        h1 a::before{
+            content: attr(directory)
+        }
+        h1 a:hover{
+            color: aliceblue;
+        }
+        h1 a:hover::after{
+            opacity: 1;
+        }
+        h1 a::after{
+            content: attr(description);
+            font-size: x-small;
+            color: aliceblue;
+            padding: 3px;
+            text-decoration: none;
+            position: absolute;
+            top: 125%;
+            right: 50%;
+            transform: translateX(50%);
+            border: 2px solid #647790;
+            border-radius: 10px;
+            background-color: #354458;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            pointer-events: none;
+        }
+        
+        .backboard{
+            position: relative;
+            justify-self: center;
+            background-color: #18212C;
+            width: 50%;
+            padding: 10px 20px 50px 20px;
+
+        }
+        .projects{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 1fr);
+            gap: 20px;
+        }
+
+        /*.projects div a div{
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            gap: 10px;
+            background-color: #354458;
+            padding: 5px;
+            border-radius: 10px;
+            color: aliceblue
+        }*/
+        
+        .projects img{
+            width: 30px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1><a href="/" directory="hellgren.dev" description="Go Home"></a>/projects</h1>
+
+    <div class="backboard">
+        <h2>My Projects</h2>
+        <div class="projects">
+
+            <div>
+                <a href="">
+                    <div class="vega">
+                        <img src="favicons/vega.ico"/>
+                        <div class="projectName">VEGA</div>
+                        <div class="indicator">
+                            <div class="dev"></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div>
+                <a href="">
+                    <div class="hellgren">
+                        <img src="/assets/hellgren.ico"/>
+                        <div class="projectName">hellgren.dev</div>
+                        <div class="indicator">
+                            <div class="main"></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div>
+                <a href="">
+                    <div class="reportPaper">
+                        <img src="favicons/eber.ico"/>
+                        <div class="projectName">Report Paper</div>
+                        <div class="indicator">
+                            <div class="pending"></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

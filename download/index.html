@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--AboutPage-->
+<!DOCTYPE html><!--DownloadsPage-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,12 @@
     <link rel="icon" type="image/x-icon" href="assets/hellgren.ico">
 
     <style>
+        @font-face {
+            font-family: 'DOS VGA 437';
+            src: url('9x16.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
         body{
             margin: 50px;
             font-family: 'Montserrat', 'Segoe UI', sans-serif;
@@ -25,7 +31,7 @@
             background-repeat: no-repeat;
         }
         h1{
-            position: sticky;
+            position: relative;
         }
         h1 a{
             position: relative;
@@ -57,12 +63,43 @@
             transition: opacity 0.2s ease;
             pointer-events: none;
         }
-            
+        .bluescreen{
+            width: 50%;
+            background-color: rgb(32, 32, 205);
+            justify-self: center;
+            border: 2px solid #18212C;
+
+        }
+        .sadMessage{
+            padding: 50px;
+            line-height: 200%;
+            font-family: 'DOS VGA 437', sans-serif;
+        }
+        .sadMessage h1{
+            font-size: 75px;
+            margin: 0 0 35px 0;
+        }
+        .sadMessage p{
+            margin: 0 20px 0 20px;
+
+        }
+
     </style>
 
 </head>
 <body>
-    <h1><a href="/" directory="hellgren.dev" description="Go Home"></a>/about</h1>
+    <h1><a href="/" directory="hellgren.dev" description="Go Home"></a>/downloads</h1>
+    <div class="bluescreen">
+        <div class="sadMessage">
+            <h1>:(</h1>
+            <p>A problem has occurred. Currently, there are no applications available for download.  
+            Multiple projects are in progress, and new applications will be released soon.<br><br></p>
+            <p>For now, please return to the home page to learn about the ongoing projects.</p>
+        </div>
+        
+
+    </div>
+    
 
 </body>
 </html>
