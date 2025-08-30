@@ -57,32 +57,79 @@
         }
         
         .backboard{
-            position: relative;
+            position: absolute;
+            top: 20%;
             justify-self: center;
             background-color: #18212C;
-            width: 50%;
-            padding: 10px 20px 50px 20px;
+            width: 60%;
 
+        }
+        .header{
+            display: flex;
+            margin: 30px 0 0 50px;
+            align-items: center;
+            gap: 20px
+        }
+        .header div{
+            display: flex;
+            gap: 10px;
         }
         .projects{
-            display: grid;
-            grid-template-columns: repeat(auto-fill, 1fr);
-            gap: 20px;
+            position: relative;
+            display: flex;
+            margin: 50px;
+            margin-top: 20px;
+            margin-bottom: 200px;
+            gap: 40px;
+            flex-wrap: wrap;
         }
 
-        /*.projects div a div{
-            display: flex;
-            width: fit-content;
-            height: fit-content;
+        .item{
+            display: grid;
+            grid-template-columns: 30px 1fr 20px;
             gap: 10px;
+            align-items: center;
             background-color: #354458;
+            border: 2px solid #354458;
+            border-radius: 20px;
             padding: 5px;
-            border-radius: 10px;
-            color: aliceblue
-        }*/
-        
-        .projects img{
+            width: 200px;
+            color:aliceblue;
+            text-decoration: none;
+        }
+        .item:hover{
+            border: 2px solid #647790;
+        }
+
+        .item img{
             width: 30px;
+        }
+            
+
+        .indicator div, .header .live,  .header .main,  .header .dev,  .header .pending, .header .stabil{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+        }
+        .stabil{
+            background-color: rgb(40, 40, 213);
+            border: 2px solid darkblue;
+        }
+        .live{
+            background-color: rgb(255, 91, 91);
+            border: 2px solid darkred;
+        }
+        .main{
+            background-color: lightgreen;
+            border: 2px solid green;
+        }
+        .dev{
+            background-color: rgb(255, 255, 90);
+            border: 2px solid rgb(124, 124, 0);
+        }
+        .pending{
+            background-color: lightgray;
+            border: 2px solid gray;
         }
     </style>
 
@@ -91,13 +138,32 @@
     <h1><a href="/" directory="hellgren.dev" description="Go Home"></a>/projects</h1>
 
     <div class="backboard">
-        <h2>My Projects</h2>
+        <div class="header">
+            <h2>My Projects</h2>
+            <div>
+                <div class="stabil"></div>
+            </div>
+            <div>
+                <div class="live"></div>
+            </div>
+            <div>
+                <div class="main"></div>
+            </div>
+            <div>
+                <div class="dev"></div>
+            </div>
+            <div>
+                <div class="pending"></div>
+            </div>
+            
+        </div>
+        
         <div class="projects">
 
             <div>
-                <a href="">
-                    <div class="vega">
-                        <img src="favicons/vega.ico"/>
+                <a class="vega" href="">
+                    <div class="item"  status="In development">
+                        <img src="favicons/vega.ico" onerror="this.src='favicons/no-logo.ico'"/>
                         <div class="projectName">VEGA</div>
                         <div class="indicator">
                             <div class="dev"></div>
@@ -107,9 +173,9 @@
             </div>
             
             <div>
-                <a href="">
-                    <div class="hellgren">
-                        <img src="/assets/hellgren.ico"/>
+                <a class="hellgren" href="">
+                    <div class="item">
+                        <img src="/assets/hellgren.ico" onerror="this.src='favicons/no-logo.ico'"/>
                         <div class="projectName">hellgren.dev</div>
                         <div class="indicator">
                             <div class="main"></div>
@@ -119,12 +185,36 @@
             </div>
 
             <div>
-                <a href="">
-                    <div class="reportPaper">
-                        <img src="favicons/eber.ico"/>
+                <a class="reportPaper" href="">
+                    <div class="item">
+                        <img src="favicons/eber.ico" onerror="this.src='favicons/no-logo.ico'"/>
                         <div class="projectName">Report Paper</div>
                         <div class="indicator">
                             <div class="pending"></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div>
+                <a class="readme" href="">
+                    <div class="item">
+                        <img src="favicons/readme.ico" onerror="this.src='favicons/no-logo.ico'"/>
+                        <div class="projectName">Readme.md</div>
+                        <div class="indicator">
+                            <div class="live"></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div>
+                <a class="readme" href="">
+                    <div class="item">
+                        <img src="favicons/readme.ico" onerror="this.src='favicons/no-logo.ico'"/>
+                        <div class="projectName">Readme.md</div>
+                        <div class="indicator">
+                            <div class="live"></div>
                         </div>
                     </div>
                 </a>
