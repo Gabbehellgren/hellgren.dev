@@ -55,170 +55,131 @@
             transition: opacity 0.2s ease;
             pointer-events: none;
         }
-        
+
+        /*------------------------------------*/
         .backboard{
-            position: absolute;
-            top: 20%;
             justify-self: center;
             background-color: #18212C;
-            width: 60%;
-
+            padding: 50px;
+            width: 50%;
         }
-        .header{
+        .flex{
             display: flex;
-            margin: 30px 0 0 50px;
-            align-items: center;
-            gap: 20px
-        }
-        .header div{
-            display: flex;
-            gap: 10px;
-        }
-        .projects{
-            position: relative;
-            display: flex;
-            margin: 50px;
-            margin-top: 20px;
-            margin-bottom: 200px;
-            gap: 40px;
             flex-wrap: wrap;
         }
-
-        .item{
+        .link{
+            position: relative;
+            text-decoration: none;
+            color: aliceblue;
+        }
+        .tooltip::after{
+            position: absolute;
+            left:50%;
+            top: 115%;
+            transform: translatex(-50%);
+            text-wrap: nowrap;
+            text-align: center;
+            content: "⤷ " attr(status);
+            font-size: small;
+            background-color: #354458;
+            border-radius: 10px;
+            padding: 3px;
+            opacity: 0;
+        }
+        .projectcontainer:hover + .tooltip::after{
+            opacity: 1;
+        }
+        .projectcontainer{
+            position: relative;
             display: grid;
-            grid-template-columns: 30px 1fr 20px;
-            gap: 10px;
+            gap: 15px;
+            grid-template-columns: 30px 150px auto;
             align-items: center;
             background-color: #354458;
             border: 2px solid #354458;
-            border-radius: 20px;
-            padding: 5px;
-            width: 200px;
-            color:aliceblue;
-            text-decoration: none;
+            border-radius: 25px;
+            height: 40px;
+            transition: border 0.2s ease;
         }
-        .item:hover{
+        .projectcontainer:hover{
             border: 2px solid #647790;
         }
-
-        .item img{
+        .image{
             width: 30px;
+            transform: translateX(25%);
         }
-            
-
-        .indicator div, .header .live,  .header .main,  .header .dev,  .header .pending, .header .stabil{
-            width: 15px;
-            height: 15px;
+        .indicator div{
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
+            transform: translatex(-25%);
         }
         .stabil{
-            background-color: rgb(40, 40, 213);
-            border: 2px solid darkblue;
+            background-color: lightblue;
+            border: 2px solid #647790;
         }
         .live{
-            background-color: rgb(255, 91, 91);
-            border: 2px solid darkred;
+            background-color: lightcoral;
+            border: 2px solid #647790;
         }
         .main{
             background-color: lightgreen;
-            border: 2px solid green;
+            border: 2px solid #647790;
         }
         .dev{
-            background-color: rgb(255, 255, 90);
-            border: 2px solid rgb(124, 124, 0);
+            background-color: goldenrod;
+            border: 2px solid #647790;
         }
         .pending{
             background-color: lightgray;
-            border: 2px solid gray;
+            border: 2px solid #647790;
         }
-    </style>
 
-</head>
+    </style>
 <body>
-    <h1><a href="/" directory="hellgren.dev" description="Go Home"></a>/projects</h1>
+    <h1><a href="/" description="Go Home">hellgren.dev</a>/about</h1>
 
     <div class="backboard">
-        <div class="header">
-            <h2>My Projects</h2>
-            <div>
-                <div class="stabil"></div>
-            </div>
-            <div>
-                <div class="live"></div>
-            </div>
-            <div>
-                <div class="main"></div>
-            </div>
-            <div>
-                <div class="dev"></div>
-            </div>
-            <div>
-                <div class="pending"></div>
-            </div>
-            
-        </div>
-        
-        <div class="projects">
+        <h2>Dash</h2>
+        <div class="flex">
 
-            <div>
-                <a class="vega" href="">
-                    <div class="item"  status="In development">
-                        <img src="favicons/vega.ico" onerror="this.src='favicons/no-logo.ico'"/>
-                        <div class="projectName">VEGA</div>
-                        <div class="indicator">
-                            <div class="dev"></div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div>
-                <a class="hellgren" href="">
-                    <div class="item">
-                        <img src="/assets/hellgren.ico" onerror="this.src='favicons/no-logo.ico'"/>
-                        <div class="projectName">hellgren.dev</div>
-                        <div class="indicator">
-                            <div class="main"></div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <a href="" class="link">
+                <div class="projectcontainer">
+                    <img src="favicons/VEGA.ico" class="image" onerror="this.src='favicons/no-logo.ico'">   <!--ikon-->
+                    <div class="name">VEGA</div>    <!--Projectnamn-->
+                    <div class="indicator"><div class="dev"></div></div>    <!--indikator-->
+                </div>
+                <div status="In development" class="tooltip"></div>     <!--status-->
+            </a>
 
-            <div>
-                <a class="reportPaper" href="">
-                    <div class="item">
-                        <img src="favicons/eber.ico" onerror="this.src='favicons/no-logo.ico'"/>
-                        <div class="projectName">Report Paper</div>
-                        <div class="indicator">
-                            <div class="pending"></div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <a href="" class="link">
+                <div class="projectcontainer">
+                    <img src="/assets/hellgren.ico" class="image" onerror="this.src='favicons/no-logo.ico'">   <!--ikon-->
+                    <div class="name">hellgren.dev</div>    <!--Projectnamn-->
+                    <div class="indicator"><div class="main"></div></div>    <!--indikator-->
+                </div>
+                <div status="Main Focus" class="tooltip"></div>     <!--status-->
+            </a>
 
-            <div>
-                <a class="readme" href="">
-                    <div class="item">
-                        <img src="favicons/readme.ico" onerror="this.src='favicons/no-logo.ico'"/>
-                        <div class="projectName">Readme.md</div>
-                        <div class="indicator">
-                            <div class="live"></div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <a href="" class="link">
+                <div class="projectcontainer">
+                    <img src="favicons/eber.ico" class="image" onerror="this.src='favicons/no-logo.ico'">   <!--ikon-->
+                    <div class="name">Report Paper</div>    <!--Projectnamn-->
+                    <div class="indicator"><div class="pending"></div></div>    <!--indikator-->
+                </div>
+                <div status="Pending" class="tooltip"></div>     <!--status-->
+            </a>
 
-            <div>
-                <a class="readme" href="">
-                    <div class="item">
-                        <img src="favicons/readme.ico" onerror="this.src='favicons/no-logo.ico'"/>
-                        <div class="projectName">Readme.md</div>
-                        <div class="indicator">
-                            <div class="live"></div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <a href="" class="link">
+                <div class="projectcontainer">
+                    <img src="" class="image" onerror="this.src='favicons/no-logo.ico'">   <!--ikon-->
+                    <div class="name">Readme</div>    <!--Projectnamn-->
+                    <div class="indicator"><div class="live"></div></div>    <!--indikator-->
+                </div>
+                <div status="Download Available" class="tooltip"></div>     <!--status-->
+            </a>
+
+
 
         </div>
     </div>
