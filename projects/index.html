@@ -66,6 +66,9 @@
         .flex{
             display: flex;
             flex-wrap: wrap;
+            column-gap: 50px;
+            row-gap: 40px;
+            justify-content: center;
         }
         .link{
             position: relative;
@@ -84,7 +87,10 @@
             background-color: #354458;
             border-radius: 10px;
             padding: 3px;
+            padding-left: 10px;
+            padding-right: 10px;
             opacity: 0;
+            transition: opacity 0.2s ease;
         }
         .projectcontainer:hover + .tooltip::after{
             opacity: 1;
@@ -178,8 +184,6 @@
                 </div>
                 <div status="Download Available" class="tooltip"></div>     <!--status-->
             </a>
-
-
 
         </div>
     </div>
