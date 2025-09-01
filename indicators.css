@@ -1,0 +1,29 @@
+.indicator div{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.public-arkived{
+    background-color: lightblue;
+    border: 2px solid blue; 
+}
+.public{
+    background-color: lightcoral;
+    border: 2px solid red; 
+}
+.main{
+    background-color: lightgreen;
+    border: 2px solid green; 
+}
+.dev{
+    background-color: rgb(235, 235, 132);
+    border: 2px solid yellow; 
+}
+.pending{
+    background-color: lightgray;
+    border: 2px solid gray; 
+}
+
+.indicatorIcon{
+    border: 2px solid aliceblue; 
+}

@@ -1,0 +1,9 @@
+body{
+    margin: 50px;
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    font-size: medium;
+    color: aliceblue;
+    background: linear-gradient(0deg, #18212C 0%, #3D5FA4 40%, #18212C 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}

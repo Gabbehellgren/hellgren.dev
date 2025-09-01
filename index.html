@@ -8,162 +8,82 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="/default-theme.css" onerror="this.href='/hellgren.dev/default-theme.css'">
+    <link rel="stylesheet" href="/indicators.css" onerror="this.href='/hellgren.dev/indicators.css'">
 
     <title>hellgren.dev</title>
     <link rel="icon" type="image/x-icon" href="assets/hellgren.ico">
 
     <style>
-        body{
-            margin: 50px;
-            font-family: 'Montserrat', 'Segoe UI', sans-serif;
-            font-size: medium;
-            color: aliceblue;
-            background: linear-gradient(0deg, #18212C 0%, #3D5FA4 40%, #18212C 100%);
-            width: 1fr;
-            height: 1vh;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-        }
-        h3{
-            margin: 5px 0;
-        }
-
-        h1{
-            position: relative;
-        }
-
-        .activeProjects{
+        .projectBoard{
             display: grid;
             grid-template-columns: auto auto;
-            height: fit-content;
+            grid-template-rows: auto auto;
+            background: black;
             padding: 10px;
-            background-color: #354458;
-            border: 2px solid #18212C;
-            border-radius: 10px;
         }
-        .tableHeader, .indicatorHolder{
-            font-weight: bold;
-            padding-bottom: 8px;
+        .projectHeader{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .projects{
+            display: inline;
         }
         .project{
-            /*       T    R    B    L     */
-            padding: 5px 75px 5px 5px;
-
-        }
-        .status{
-            font-size: x-small;
-            position: relative;
-        }
-        .tableHeader, .project, .status, .indicatorHolder{
-            border-bottom: 1px solid lightgray;
-        }
-
-        .ActiveProjectsMain{
-            position: absolute;
-            top: 30%;
-            transform: translate(0, -50%);
-        }
-
-        .buttons{
-            position: absolute;
-            bottom: 10%;
-            justify-self: center;
             display: grid;
-            grid-template-columns: repeat(5, auto);
-            gap: 30px;
-        }
-        .buttons a{
-            display: inline-block;
-            background-color: rgb(78, 119, 193);
-            border: 2px solid rgb(50, 77, 126);
-            border-radius: 5px;
-            padding: 5px;
-            text-decoration: none;
-            color:aliceblue;
-            transition: transform 0.2s ease;
-        }
+            grid-template-columns: 150px auto;
+            grid-template-rows: 20px;
+            align-items: center;
 
-        .buttons a:hover{
-            transform: scale(1.2);
-            text-decoration: underline;
-        } 
-        .mark{
-            position: relative;
-            top: 25%;
-            margin: 0;
-            padding: 0;
-            
-        }
-        .indicator{
-            border: 2px solid aliceblue;
-            position: absolute;
-            top: 15%;
-        }
-        .main{
-            background-color: lightgreen;
-            border: 2px solid green;
-        }
-        .dev{
-            background-color: rgb(255, 255, 90);
-            border: 2px solid rgb(124, 124, 0);
-        }
-        .pending{
-            background-color: lightgray;
-            border: 2px solid gray;
-        }
-        .main, .dev, .pending, .indicator{
-            position: relative;
-            top: 25%;
-            margin: 0px 75px 0px 0px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            justify-self: center;
-        }
-        .indicator::after, .main::after, .dev::after, .pending::after{
-            content: attr(tip);
-            white-space: nowrap;
-            overflow: visible;
-            max-width: none;
-            border: 2px solid #647790;
-            font-weight: normal;
-            padding: 3px;
-            border-radius: 10px;
-            font-size: x-small;
-            position: absolute;
-            left: 150%;
-            bottom: -60%;
-            color: aliceblue;
-            background-color: #354458;
-            opacity: 0;
-            transition: opacity 0.2s ease, transform 0.2s ease;
-        }
-        .indicator:hover::after, .main:hover::after, .dev:hover::after, .pending:hover::after{
-            opacity: 100%;
+            background-color: gray;
         }
     </style>
 
 </head>
 <body>
-    <h1>hellgren.dev</h1>
+    <header>
+        <h1>hellgren.dev</h1>
+    </header>
+    <main>
+        <div class="projectBoard">
+            <div class="projectHeader">
+                <p>Project</p>
+                <div class="indicator">
+                    <div class="indicatorIcon"></div>
+                </div>
+                
+            </div>
 
-    <div class="ActiveProjectsMain">
-        <h3>Active Projects</h3>
-        <div class="activeProjects">
-            <div class="tableHeader">Project:</div>  <div class="indicatorHolder"><div class="indicator" tip="Status-indicator"></div></div>
-            <div class="project">VEGA</div>    <div class="status"><div class="dev" tip="In development"></div></div>
-            <div class="project">hellgren.dev</div>    <div class="status"><div class="main" tip="Main Focus"></div></div>    
+            <div class="projects">
+
+                <div class="project">
+                    <div class="projectName">VEGA</div>
+                    <div class="indicator">
+                        <div class="dev"></div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="projectName">hellgren.dev</div>
+                    <div class="indicator">
+                        <div class="main"></div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-    </div>
-    
 
-    <div class="buttons">
-        <div class="mark">>>></div>
-        <div><a href="about/">About</a></div>
-        <div><a href="projects/">Projects</a></div>
-        <div><a href="download/">Downloads</a></div>
-        <div class="mark"><<<</div>
-    </div>
+        <div class="buttonpanel">
+            <p>>>></p>
+
+            <a href="about">About</a>
+            <a href="projects">Projects</a>
+            <a href="download">Downloads</a>
+
+            <p><<<</p>
+        </div>
+    </main>
 </body>
 </html>
 
