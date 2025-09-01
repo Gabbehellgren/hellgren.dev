@@ -1,3 +1,11 @@
+:root{
+    --layer1: #434e68;
+    --layer1accent: #556280;
+
+    --layer2: rgb(43, 56, 82);
+    --layer2accent: rgb(94, 120, 174);
+}
+
 body{
     margin: 50px;
     font-family: 'Montserrat', 'Segoe UI', sans-serif;

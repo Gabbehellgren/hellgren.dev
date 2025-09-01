@@ -18,23 +18,43 @@
         .projectBoard{
             display: grid;
             grid-template-columns: auto;
-            grid-template-rows: 40px;
-            background-color: black;
+            grid-template-rows: auto auto;
+            background-color: var(--layer1);
+            border: 2px solid var(--layer1accent);
+            border-radius: 10px;
+            width: fit-content;
             padding: 10px;
+
+            position: absolute;
+            bottom: 60%;
+        }
+        .projectHeader, .project{
+            border-bottom: 2px solid var(--layer1accent);
+            padding-left: 5px;
+            padding-right: 10px;
+            align-items: center;
+            position: relative;
+            
         }
         .projectHeader{
             display: grid;
             grid-template-columns: 150px auto;
-            align-items: center;
+        }
+        .projectHeader h3{
+            font-weight: bold;
+            margin: 0;
         }
         .projects{
-            display: inline;
+            display: flex;
+            flex-direction: column;
         }
         .project{
             display: grid;
-            grid-template-columns: 150px auto;
-            grid-template-rows: 20px;
-            align-items: center;
+            grid-template-columns: 1fr auto;
+            grid-template-rows: 2em;
+        }
+        .statustip{
+            left: 100%;
         }
     </style>
 
@@ -46,27 +66,23 @@
     <main>
         <div class="projectBoard">
             <div class="projectHeader">
-                <p>Project</p>
-                <div class="indicator">
-                    <div class="indicatorIcon"></div>
-                </div>
-                
+                <h3>Project</h3>
+                <div class="indicatorIcon indicator"></div>
+                <div class="statustip" status="Status Indicator"></div>
             </div>
 
             <div class="projects">
 
                 <div class="project">
                     <div class="projectName">VEGA</div>
-                    <div class="indicator">
-                        <div class="dev"></div>
-                    </div>
+                    <div class="development indicator"></div>
+                    <div class="statustip" status="In development"></div>
                 </div>
 
                 <div class="project">
                     <div class="projectName">hellgren.dev</div>
-                    <div class="indicator">
-                        <div class="main"></div>
-                    </div>
+                    <div class="main indicator" ></div>
+                    <div class="statustip" status="Main Focus"></div>
                 </div>
 
             </div>

@@ -1,9 +1,32 @@
-.indicator div{
+.indicator {
     width: 10px;
     height: 10px;
     border-radius: 50%;
+    place-self: center;
 }
+.statustip{
+    width: fit-content;
+    height: fit-content;
+    font-size: xx-small;
+    position: absolute;
+}
+.statustip::after{
+    content: attr(status);
+    padding: 3px;
 
+    background-color: var(--layer2);
+    border: 2px solid var(--layer2accent);
+    border-radius: 20px;
+
+    text-wrap: nowrap;
+    
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.indicator:hover + .statustip::after{
+    opacity: 1;
+}
 .public-arkived{
     background-color: lightblue;
     border: 2px solid blue; 
@@ -16,7 +39,7 @@
     background-color: lightgreen;
     border: 2px solid green; 
 }
-.dev{
+.development{
     background-color: rgb(235, 235, 132);
     border: 2px solid rgb(135, 135, 0); 
 }
@@ -26,5 +49,5 @@
 }
 
 .indicatorIcon{
-    border: 2px solid aliceblue; 
-}
+    border: 2px solid aliceblue;
+}   
