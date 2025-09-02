@@ -8,61 +8,55 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="/default-theme.css" onerror="this.href='/hellgren.dev/default-theme.css'">
+    <link rel="stylesheet" href="/indicators.css" onerror="this.href='/hellgren.dev/indicators.css'">
 
     <title>hellgren.dev</title>
-    <link rel="icon" type="image/x-icon" href="assets/hellgren.ico">
+    <link rel="icon" type="image/x-icon" href="/assets/hellgren-logo.ico" onerror="this.href='/hellgren.dev/assets/hellgren-logo.ico'">
 
     <style>
-        body{
-            margin: 50px;
-            font-family: 'Montserrat', 'Segoe UI', sans-serif;
-            font-size: medium;
-            color: aliceblue;
-            background: linear-gradient(0deg, #18212C 0%, #3D5FA4 40%, #18212C 100%);
-            width: 1fr;
-            height: 1vh;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
+        main{
+            background-color: var(--layer1);
+            width: 50%;
+            justify-self: center;
+            padding: 30px;
+            border: 2px solid var(--layer1accent);
+            border-radius: 20px;
         }
-        h1{
-            position: sticky;
+        h3{
+            margin-top: 50px;
+            margin-bottom: 0px;
         }
-        h1 a{
-            position: relative;
-            color: rgb(164, 170, 176);
+        p{
+            text-wrap: wrap;
+            line-height: 1.6;
         }
-        h1 a::before{
-            content: attr(directory)
-        }
-        h1 a:hover{
-            color: aliceblue;
-        }
-        h1 a:hover::after{
-            opacity: 100%;
-        }
-        h1 a::after{
-            content: attr(description);
-            font-size: x-small;
-            color: aliceblue;
-            padding: 3px;
-            text-decoration: none;
-            position: absolute;
-            top: 125%;
-            right: 50%;
-            transform: translate(50%);
-            border: 2px solid #647790;
-            border-radius: 10px;
-            background-color: #354458;
-            opacity: 0;
-            transition: opacity 0.2s ease;
-            pointer-events: none;
-        }
-            
     </style>
 
 </head>
 <body>
-    <h1><a href="/" directory="hellgren.dev" description="Go Home"></a>/about</h1>
+    <header>
+        <h1><a href="/" destination="Go home">hellgren.dev<div></div></a>/about</h1>
+    </header>
+    <main>
+        <h2>About page</h2>
+        <div>
+            <h3>hellgren.dev</h3>
+            <p>This site will be used for projects and as a portfolio.
+                Mainly, hellgren.dev will showcase my projects and skills. 
+                Programming and design are my hobbies, therefore the content published may not always be updated or correct. 
+                I hope you will find my content interesting.
+            </p>
+            <h3>About me</h3>
+            <p>Hi, my name is Oscar! I am the owner and programmer/designer of hellgren.dev. 
+                Currently, I am in my last year of high school. 
+                In the future, I plan to attend university and later become an engineer, working mainly with programming and design. 
+                In my spare time, I like to train a lot as well as develop my own projects.
+            </p>
+        </div>
+        
+    </main>
+
 
 </body>
 </html>

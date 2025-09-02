@@ -22,13 +22,13 @@
     
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.2s ease;
 }
 .indicator:hover + .statustip::after{
     opacity: 1;
 }
 .public-arkived{
-    background-color: lightblue;
+    background-color: rgb(82, 166, 195);
     border: 2px solid blue; 
 }
 .public{

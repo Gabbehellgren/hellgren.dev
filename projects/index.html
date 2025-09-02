@@ -11,11 +11,78 @@
     <link rel="stylesheet" href="/default-theme.css" onerror="this.href='/hellgren.dev/default-theme.css'">
     <link rel="stylesheet" href="/indicators.css" onerror="this.href='/hellgren.dev/indicators.css'">
 
-    <title>Projects</title>
-    <link rel="icon" type="image/x-icon" href="assets/hellgren.ico">
+    <title>hellgren.dev</title>
+    <link rel="icon" type="image/x-icon" href="/assets/hellgren-logo.ico" onerror="this.href='/hellgren.dev/assets/hellgren-logo.ico'">
 
     <style>
-
+        .projectbackboard{
+            position: absolute;
+            width: 40%;
+            top: 200px;
+            justify-self: center;
+            background-color: var(--layer1);
+            padding: 30px;
+            border: 2px solid var(--layer1accent);
+            border-radius: 15px;
+        }
+        .projects{
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 40px;
+            row-gap: 35px;
+            padding-bottom: 50px;
+        }
+        .project{
+            color: aliceblue;
+            display: grid;
+            grid-template-columns: auto 110px auto;
+            gap: 10px;
+            background-color: var(--layer2);
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            border-radius: 20px;
+            text-decoration: none;
+            border: 2px solid var(--layer2);
+            transition: border-color 0.2s ease;
+            position: relative;
+            align-items: center;
+        }
+        .project:hover{
+            border-color: var(--layer2accent);
+        }
+        .projectstatus{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 110%
+        }
+        .projectstatus::after{
+            content: "⤷ " attr(status);
+            font-size: x-small;
+            text-wrap: nowrap;
+            background-color: var(--layer2);
+            border: 2px solid var(--layer2accent);
+            border-radius: 20px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-left: 5px;
+            padding-right: 5px;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        .project:hover .projectstatus::after{
+            opacity: 1;
+        }
+        .image{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .projectname{
+            margin: 0;
+        }
     </style>
 
 </head>
@@ -24,6 +91,48 @@
         <h1><a href="/" destination="Go home">hellgren.dev<div></div></a>/projects</h1>
     </header>
     <main>
+        <div class="projectbackboard">
+            <h2>Project dash</h2>
+            <div class="projects">
+
+                <a href="" class="project">
+                    <img class="image" contrast="--nocontrast" src="favicons/VEGA.ico">
+                    <p class="projectname">VEGA</p>
+                    <div class="development indicator"></div>
+                    <div class="projectstatus" status="In development"></div>
+                </a>
+
+                <a href="/about/" class="project">
+                    <img class="image" contrast="--nocontrast" src="/assets/hellgren-logo.ico">
+                    <p class="projectname">hellgren.dev</p>
+                    <div class="main indicator"></div>
+                    <div class="projectstatus" status="Main focus"></div>
+                </a>
+
+                <a href="" class="project">
+                    <img class="image" contrast="--nocontrast" src="favicons/eber.ico">
+                    <p class="projectname">Report paper</p>
+                    <div class="pending indicator"></div>
+                    <div class="projectstatus" status="Pending"></div>
+                </a>
+
+                <a href="" class="project">
+                    <img class="image" contrast="--contrast" src="" onerror="this.src='favicons/no-logo.ico'">
+                    <p class="projectname">Readme</p>
+                    <div class="public indicator"></div>
+                    <div class="projectstatus" status="Available for download"></div>
+                </a>
+
+                <a href="" class="project">
+                    <img class="image" contrast="--contrast" src="" onerror="this.src='favicons/no-logo.ico'">
+                    <p class="projectname">archived.txt</p>
+                    <div class="public-arkived indicator"></div>
+                    <div class="projectstatus" status="Available for download (archived)"></div>
+                </a>
+
+            </div>
+            
+        </div>
     </main>
 </body>
 </html>
