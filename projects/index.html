@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--ProjectsPage-->
+<!DOCTYPE html><!--Projects-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,178 +7,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/default.css" onerror="this.href='/hellgren.dev/default.css'">
 
-    <title>hellgren.dev</title>
+    <link rel="stylesheet" href="/default-theme.css" onerror="this.href='/hellgren.dev/default-theme.css'">
+    <link rel="stylesheet" href="/indicators.css" onerror="this.href='/hellgren.dev/indicators.css'">
+
+    <title>Projects</title>
     <link rel="icon" type="image/x-icon" href="assets/hellgren.ico">
 
     <style>
-        
-        h1{
-            position: relative;
-        }
-        h1 a{
-            position: relative;
-            color: rgb(164, 170, 176);
-        }
-        h1 a::before{
-            content: attr(directory)
-        }
-        h1 a:hover{
-            color: aliceblue;
-        }
-        h1 a:hover::after{
-            opacity: 1;
-        }
-        h1 a::after{
-            content: attr(description);
-            font-size: x-small;
-            color: aliceblue;
-            padding: 3px;
-            text-decoration: none;
-            position: absolute;
-            top: 125%;
-            right: 50%;
-            transform: translateX(50%);
-            border: 2px solid #647790;
-            border-radius: 10px;
-            background-color: #354458;
-            opacity: 0;
-            transition: opacity 0.2s ease;
-            pointer-events: none;
-        }
-
-        /*------------------------------------*/
-        .backboard{
-            justify-self: center;
-            background-color: #18212C;
-            padding: 50px;
-            width: 50%;
-        }
-        .flex{
-            display: flex;
-            flex-wrap: wrap;
-            column-gap: 50px;
-            row-gap: 40px;
-            justify-content: center;
-        }
-        .link{
-            position: relative;
-            text-decoration: none;
-            color: aliceblue;
-        }
-        .tooltip::after{
-            position: absolute;
-            left:50%;
-            top: 115%;
-            transform: translatex(-50%);
-            text-wrap: nowrap;
-            text-align: center;
-            content: "⤷ " attr(status);
-            font-size: small;
-            background-color: #354458;
-            border-radius: 10px;
-            padding: 3px;
-            padding-left: 10px;
-            padding-right: 10px;
-            opacity: 0;
-            transition: opacity 0.2s ease;
-        }
-        .projectcontainer:hover + .tooltip::after{
-            opacity: 1;
-        }
-        .projectcontainer{
-            position: relative;
-            display: grid;
-            gap: 15px;
-            grid-template-columns: 30px 150px auto;
-            align-items: center;
-            background-color: #354458;
-            border: 2px solid #354458;
-            border-radius: 25px;
-            height: 40px;
-            transition: border 0.2s ease;
-        }
-        .projectcontainer:hover{
-            border: 2px solid #647790;
-        }
-        .image{
-            width: 30px;
-            transform: translateX(25%);
-        }
-        .indicator div{
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            transform: translatex(-25%);
-        }
-        .stabil{
-            background-color: lightblue;
-            border: 2px solid #647790;
-        }
-        .live{
-            background-color: lightcoral;
-            border: 2px solid #647790;
-        }
-        .main{
-            background-color: lightgreen;
-            border: 2px solid #647790;
-        }
-        .dev{
-            background-color: goldenrod;
-            border: 2px solid #647790;
-        }
-        .pending{
-            background-color: lightgray;
-            border: 2px solid #647790;
-        }
 
     </style>
+
+</head>
 <body>
-    <h1><a href="/" description="Go Home">hellgren.dev</a>/about</h1>
-
-    <div class="backboard">
-        <h2>Dash</h2>
-        <div class="flex">
-
-            <a href="" class="link">
-                <div class="projectcontainer">
-                    <img src="favicons/VEGA.ico" class="image" onerror="this.src='favicons/no-logo.ico'">   <!--ikon-->
-                    <div class="name">VEGA</div>    <!--Projectnamn-->
-                    <div class="indicator"><div class="dev"></div></div>    <!--indikator-->
-                </div>
-                <div status="In development" class="tooltip"></div>     <!--status-->
-            </a>
-
-            <a href="" class="link">
-                <div class="projectcontainer">
-                    <img src="/assets/hellgren.ico" class="image" onerror="this.src='favicons/no-logo.ico'">   <!--ikon-->
-                    <div class="name">hellgren.dev</div>    <!--Projectnamn-->
-                    <div class="indicator"><div class="main"></div></div>    <!--indikator-->
-                </div>
-                <div status="Main Focus" class="tooltip"></div>     <!--status-->
-            </a>
-
-            <a href="" class="link">
-                <div class="projectcontainer">
-                    <img src="favicons/eber.ico" class="image" onerror="this.src='favicons/no-logo.ico'">   <!--ikon-->
-                    <div class="name">Report Paper</div>    <!--Projectnamn-->
-                    <div class="indicator"><div class="pending"></div></div>    <!--indikator-->
-                </div>
-                <div status="Pending" class="tooltip"></div>     <!--status-->
-            </a>
-
-            <a href="" class="link">
-                <div class="projectcontainer">
-                    <img src="" class="image" onerror="this.src='favicons/no-logo.ico'">   <!--ikon-->
-                    <div class="name">Readme</div>    <!--Projectnamn-->
-                    <div class="indicator"><div class="live"></div></div>    <!--indikator-->
-                </div>
-                <div status="Download Available" class="tooltip"></div>     <!--status-->
-            </a>
-
-        </div>
-    </div>
+    <header>
+        <h1><a href="/" destination="Go home">hellgren.dev<div></div></a>/projects</h1>
+    </header>
+    <main>
+    </main>
 </body>
 </html>
 
