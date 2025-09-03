@@ -15,19 +15,21 @@
     <link rel="icon" type="image/x-icon" href="/assets/hellgren-logo.ico" onerror="this.href='/hellgren.dev/assets/hellgren-logo.ico'">
 
     <style>
-        main{
+        .about{
+            position: absolute;
             background-color: var(--layer1);
             width: 50%;
             justify-self: center;
             padding: 30px;
             border: 2px solid var(--layer1accent);
             border-radius: 20px;
+            top: 150px;
         }
         h3{
             margin-top: 50px;
             margin-bottom: 0px;
         }
-        p{
+        .text p{
             text-wrap: wrap;
             line-height: 1.6;
         }
@@ -39,22 +41,32 @@
         <h1><a href="/" destination="Go home">hellgren.dev<div></div></a>/about</h1>
     </header>
     <main>
-        <h2>About page</h2>
-        <div>
-            <h3>hellgren.dev</h3>
-            <p>This site will be used for projects and as a portfolio.
-                Mainly, hellgren.dev will showcase my projects and skills. 
-                Programming and design are my hobbies, therefore the content published may not always be updated or correct. 
-                I hope you will find my content interesting.
-            </p>
-            <h3>About me</h3>
-            <p>Hi, my name is Oscar! I am the owner and programmer/designer of hellgren.dev. 
-                Currently, I am in my last year of high school. 
-                In the future, I plan to attend university and later become an engineer, working mainly with programming and design. 
-                In my spare time, I like to train a lot as well as develop my own projects.
-            </p>
+        <div class="about">
+            <h2>About page</h2>
+            <div class="text">
+                <h3>hellgren.dev</h3>
+                <p>This site will be used for projects and as a portfolio.
+                    Mainly, hellgren.dev will showcase my projects and skills. 
+                    Programming and design are my hobbies, therefore the content published may not always be updated or correct. 
+                    I hope you will find my content interesting.
+                </p>
+                <h3>About me</h3>
+                <p>Hi, my name is Oscar! I am the owner of the domain hellgren.dev and is the developer/designer behind this site. 
+                    Currently, I am in my senior year of high school. 
+                    In the future, I plan to attend university and later become an engineer, working mainly with programming and design. 
+                    In my spare time, I like to train a lot as well as develop my own projects.
+                </p>
+            </div>
         </div>
-        
+        <div class="buttonpanel">
+            <p>>>></p>
+
+            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/download">Downloads</a>
+
+            <p><<<</p>
+        </div>
     </main>
 
 
