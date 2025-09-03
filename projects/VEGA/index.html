@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/default-theme.css" onerror="this.href='/hellgren.dev/default-theme.css'">
+    <link rel="stylesheet" href="/indicators.css" onerror="this.href='/hellgren.dev/indicators.css'">
+
+    <title>hellgren.dev</title>
+    <link rel="icon" type="image/x-icon" href="/assets/hellgren-logo.ico" onerror="this.href='/hellgren.dev/assets/hellgren-logo.ico'">
+
+    <style>
+        body{
+            background: linear-gradient(0deg, #2c1818 0%, #c93535 30%, #2c1818 100%);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color:ghostwhite;
+        }
+        .buttonpanel a{
+            background-color: #c93535;
+            color: aliceblue;
+            border: 2px solid #d36262;
+        }
+        .buttonpanel{
+            position: sticky;
+        }
+        
+        .projectback{
+            justify-self: center;
+            width: 60%;
+            background-color: #3e3434;
+            border-radius: 10px;
+            border: 2px solid #5f4f4f;
+        }
+        .projectheader{
+            background-color: #251f1f;
+            padding: 20px;
+            border-bottom: 2px solid #5f4f4f;
+            border-radius: 10px 10px 0 0;
+        }
+        .imgname{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .imgname img{
+            width: 75px;
+            height: 75px;
+        }
+        .imgname h2{
+            margin: 0;
+            line-height: 0;
+        }
+        .description{
+            padding: 30px;
+            display: block;
+        }
+        .status{
+            margin: 0;
+            padding: 0;
+            line-height: .50;
+
+        }
+        .indicator-desc{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            line-height: 0;
+        }
+        .indicator{
+            justify-self: left;
+        }
+        .language{
+            line-height: 0;
+        }
+        .description p{
+            line-height: 1.5;
+        }
+        main{
+            margin-bottom: 100px;
+            padding-bottom: 100px
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/" destination="Go home">hellgren.dev<div></div></a>
+            /
+            <a href=".." destination="Go to projects">projects<div></div></a>
+            /VEGA
+        </h1>
+    </header>
+    <main>
+        <div class="projectback">
+            <div class="projectheader">
+                <div class="imgname">
+                    <img src="VEGA.ico"/>
+                    <h2>Virtual Encrypted Gateway App</h2>
+                </div>
+
+                <div class="language">
+                    <h4>Language</h4>
+                    <ul>
+                        <li><p>C#</p></li>
+                        <li><p>Axaml</p></li>
+                    </ul>
+                    
+                </div>
+
+                <div class="indicator-desc">
+                    <div class="indicator development"></div>    
+                    <p>In development</p>
+                </div>
+
+                
+            </div>
+            <div class="description">
+                <h3>What is VEGA?</h3>
+                <p>
+                    VEGA is a lightweight VPN client application built in C# with a modern Windows UI powered by Avalonia. The interface itself is designed using AXaml, a markup language similar to XAML but specific to Avalonia (something most developers outside the Avalonia ecosystem might not be familiar with).
+                    At its core, VEGA is based on WireGuard, providing fast and secure connections without unnecessary complexity. While the underlying protocol details will be explained separately, VEGA focuses on simplicity and usability: a clean interface, straightforward configuration handling, and reliable connectivity.
+                    The application is intended for private distribution among friends. Its primary purpose is to make it easy to connect back to my home network—for example, to host a LAN session, access cloud storage, or explore other shared solutions.
+                    In short, VEGA aims to combine the technical strengths of WireGuard with an accessible, user-friendly client experience.
+                </p>
+
+                <h3>About Wireguard</h3>
+                <p>
+                    VEGA is built on top of WireGuard, a modern VPN protocol designed to be extremely fast, secure, and simple compared to traditional solutions. WireGuard is known for its lean codebase, high performance, and strong cryptography, making it an increasingly popular choice for both personal and enterprise use.
+                    More details about WireGuard can be found on the official website: <a style="color: ghostwhite;"href="https://www.wireguard.com">Wireguard.com</a>🔗
+                </p>
+                <p>
+                    Unlike older VPN protocols, WireGuard emphasizes minimal configuration and efficiency, which results in quicker connections and lower overhead. These characteristics make it an excellent foundation for VEGA’s goal of providing a straightforward and reliable VPN experience.
+                    
+                </p>
+            </div>
+        </div>
+
+        <div class="buttonpanel">
+            <p>>>></p>
+
+            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/download">Downloads</a>
+
+            <p><<<</p>
+        </div>
+    </main>
+</body>
+</html>
