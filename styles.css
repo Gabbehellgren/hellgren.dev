@@ -18,7 +18,8 @@ body{
 }
 header{
     background: var(--headerbackground);
-    display: flex;
+    display: grid;
+    grid-template-columns: 10% 1fr;
     align-items: center;
     gap: 4%;
     padding-left: 1%;
@@ -35,7 +36,7 @@ header{
 }
 .buttonpanel{
     display: flex;
-    gap: 5%;
+    gap: 2%;
 }
 .buttonpanel a{
     text-decoration: none;
@@ -56,4 +57,16 @@ header{
     padding-bottom: 10px;
     padding-top: 10px;
 }
-
+main{
+    width: 50%;
+    top: 15%;
+    justify-self: center;
+    position: absolute;
+    background: rgb(159, 156, 156);
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px solid var(--headerborder);
+    border-radius: 10px;
+    height: fit-content;
+    padding-bottom: 100px;
+}
