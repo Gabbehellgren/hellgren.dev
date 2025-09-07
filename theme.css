@@ -1,0 +1,59 @@
+:root{
+    --headerbackground: gray;
+    --headerborder: rgb(44, 44, 44);
+    --mainbackground: rgb(59, 54, 54);
+    --themecolor: blue;
+    --themecolorlight: lightblue;
+    --textcolor: aliceblue;
+}
+html, body{
+    height: 100%;
+    margin: 0;
+}
+body{
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    color: var(--textcolor);
+    background: var(--mainbackground);
+    
+}
+header{
+    background: var(--headerbackground);
+    display: flex;
+    align-items: center;
+    gap: 4%;
+    padding-left: 1%;
+    border-bottom: 2px solid var(--headerborder);
+}
+.imgH1{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+.imgH1 img{
+    width: 50px;
+    height: 50px;
+}
+.buttonpanel{
+    display: flex;
+    gap: 5%;
+}
+.buttonpanel a{
+    text-decoration: none;
+    color: var(--textcolor);
+    background-color: var(--themecolor);
+    border: 2px solid var(--themecolorlight);
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+.buttonpanel a:hover{
+    transform: scale(1.1);
+}
+.buttonpanel a h2{
+    margin: 0;
+    line-height: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
