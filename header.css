@@ -1,0 +1,36 @@
+header{
+    background: var(--headerbackground);
+    height: 40px;
+}
+.navpanel{
+    display: grid;
+    grid-template-columns: 32px repeat(5, 100px);
+    height: 100%;
+    width: 35%;
+}
+.navpanel img{
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--headerbackground);
+    border-radius: 50%;
+}
+.navpanel a{
+    display: flex;
+    color: var(--linkcolor);
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+    justify-self: center;
+    transition: transform 0.2s ease;
+    height: 100%;
+}
+.navpanel a:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+.navpanel .active{
+    font-weight: bold;
+    display: flex;
+    border-bottom: 2px solid;
+    pointer-events: none;
+}
