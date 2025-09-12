@@ -11,7 +11,7 @@ header{
 .navpanel img{
     width: 30px;
     height: 30px;
-    border: 1px solid var(--headerbackground);
+    border: 1px solid var(--linkcolor);
     border-radius: 50%;
 }
 .navpanel a{
@@ -32,5 +32,8 @@ header{
     font-weight: bold;
     display: flex;
     border-bottom: 2px solid;
-    pointer-events: none;
+    color: var(--activelink);
+}
+.navpanel .active img{
+    border: 2px solid var(--activelink)
 }

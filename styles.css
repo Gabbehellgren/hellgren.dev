@@ -1,18 +1,36 @@
 :root{
     --color: aliceblue;
-    --linkcolor: aliceblue;
+    --linkcolor: rgb(154, 160, 164);
+    --activelink: aliceblue;
     --headerbackground: rgb(69, 69, 92);
     --background: rgb(43, 43, 56);
+    --layerone: rgb(76, 76, 88);
+    --layeroneborder: rgb(160, 160, 173);
 }
 body{
     font-family: "Montserrat";
     font-size: medium;
     margin: 0;
     background: var(--background);
+    color: var(--color);
     }
-    main, header{
+    header{
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
+}
+.content{
+    text-wrap: wrap;
+    width: 40%;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+}
+.content h2{
+    padding-top: 20px;
+    line-height: 1;
+}
+.content p{
+    line-height: 1.5;
 }
