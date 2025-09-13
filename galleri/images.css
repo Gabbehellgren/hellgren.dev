@@ -8,6 +8,7 @@
 #pictures > img{
     height: 200px;
     width: auto;
+    cursor: pointer;
 }
 #pictures > img:active{
     position: fixed;
