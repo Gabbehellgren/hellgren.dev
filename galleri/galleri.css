@@ -3,25 +3,30 @@
 }
 .bibliotek{
     display: flex;
-    gap: 50px
+    gap: 50px;
 }
-.bibliotek a, .ozzy{
+.bibliotek a{
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
+
     width: 300px;
     height: calc(300px*(10/16));
+
     align-items: end;
+
     border-radius: 20px;
+
     display: flex;
     text-decoration: none;
-    color: var(--linkcolor);
     border: 2px solid var(--layeroneborder);
+
+    color: var(--color);
+
     overflow: hidden;
-    transition: background-position 10s ease;
+    transition: background-position 5s ease;
 }
 .bibliotek a > div, .ozzy > div{
-    background: var(--layerone);
     width: 100%;
     padding: 10px;
 }
@@ -37,14 +42,12 @@
 .standard:hover{
     background-position: bottom;
     text-decoration: underline;
-    color: var(--color);
 }
 .no-standard:hover{
     background-position: center;
     text-decoration: underline;
-    color: var(--color);
 }
-.bibliotek a, .ozzy{
+.ozzy{
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -54,13 +57,12 @@
     border-radius: 20px;
     display: flex;
     text-decoration: none;
-    color: var(--linkcolor);
+    color: var(--color);
     border: 2px solid var(--layeroneborder);
     overflow: hidden;
-    transition: background-position 5s ease;
+    transition: background-position 2s ease;
 }
 .ozzy:hover{
     background-position: bottom;
     text-decoration: underline;
-    color: var(--color);
 }
