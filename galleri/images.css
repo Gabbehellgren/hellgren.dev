@@ -1,0 +1,17 @@
+#pictures{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 90vw;
+}
+#pictures > img{
+    height: 200px;
+    width: auto;
+}
+#pictures > img:active{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(4);
+}
