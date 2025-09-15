@@ -21,8 +21,8 @@
     border: 1px solid rgb(123, 80, 0);
 }
 .public{
-    background-color: rgb(130, 0, 0);
-    border: 1px solid rgb(207, 0, 0);
+    background-color: rgb(207, 0, 0);
+    border: 1px solid rgb(130, 0, 0);
 }
 .archived{
     background-color: rgb(0, 0, 214);
