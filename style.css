@@ -5,11 +5,17 @@
     --layerone: rgb(50, 50, 50);
     --layeroneborder: rgb(75, 75, 75);
 }
-
-body{
-    background: var(--background);
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
     color: var(--color);
     font-family: "Montserrat", sans-serif;
     font-size: medium;
-    margin: 0;
+}
+canvas {
+    position: fixed;
+    transform: translateY(-50%);
+    top: 50%;
+    z-index: -1;
 }
