@@ -1,0 +1,15 @@
+:root{
+    --background: rgb(20, 20, 20);
+    --color: aliceblue;
+    --inactivelink: rgb(98, 102, 105);
+    --layerone: rgb(50, 50, 50);
+    --layeroneborder: rgb(75, 75, 75);
+}
+
+body{
+    background: var(--background);
+    color: var(--color);
+    font-family: "Montserrat", sans-serif;
+    font-size: medium;
+    margin: 0;
+}

@@ -1,0 +1,13 @@
+main section{
+    width: 65ch;
+    padding-left: 6%;
+    line-height: 1.8;
+}
+main section h2{
+    margin-bottom: 0;
+    line-height: 0.5;
+    margin-top: 30px;
+}
+main section p{
+    line-height: 1.5;
+}
