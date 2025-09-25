@@ -13,15 +13,13 @@ nav a{
     align-items: center;
     width: 100%;
     color: var(--inactivelink);
-    text-decoration: underline;
-    text-decoration-color: var(--background);    
+    text-decoration: none; 
 }
 nav a p{
     transition: text-decoration-color 0.5s ease, transform 0.2s ease, color 0.5s ease;
 }
 nav a:hover p{
     transform: scale(1.1);
-
     color: var(--color);
 }
 

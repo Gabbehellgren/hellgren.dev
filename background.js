@@ -6,10 +6,10 @@ let h = window.innerHeight;
 let background = "rgb(5, 5, 5)";
 
 let blobColor = "rgba(102, 102, 102, 1)";
-let blobSize = 2.5;
-let blobVel = 0.5;     // max speed
-let count = 250;
-let decimals = 1;      // number of decimal places for velocity
+let blobSize = 1;
+let blobVel = 0.2;     // max speed
+let count = 200;
+let decimals = 2;      // number of decimal places for velocity
 let direction = 0.1 * Math.PI;  // angle in radians (null = random per blob)
 let sameSpeed = false; // if true, all blobs move with exactly the same speed
 
@@ -17,14 +17,23 @@ let sameSpeed = false; // if true, all blobs move with exactly the same speed
 // HELPER FUNCTIONS
 // =========================
 function randomVel(maxVel) {
+  let minVel = 0.1 * maxVel; // minst 10% av max
   let factor = Math.pow(10, decimals);
-  return (Math.floor((Math.random() * 2 * maxVel * factor) - maxVel * factor)) / factor;
+  let vel;
+  do {
+    vel = (Math.floor((Math.random() * 2 * maxVel * factor) - maxVel * factor)) / factor;
+  } while (Math.abs(vel) < minVel); // se till att hastigheten inte är för låg
+  return vel;
 }
 
 function randomSpeed(maxVel) {
+  let minSpeed = 0.1 * maxVel; // minst 10% av max
   let factor = Math.pow(10, decimals);
-  let speed = Math.floor(Math.random() * maxVel * factor) / factor;
-  return (speed === 0 ? maxVel : speed); // aldrig exakt 0
+  let speed;
+  do {
+    speed = Math.floor(Math.random() * maxVel * factor) / factor;
+  } while (speed < minSpeed); // se till att hastigheten inte är för låg
+  return speed;
 }
 
 // =========================

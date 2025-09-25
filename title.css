@@ -1,0 +1,38 @@
+section{
+    justify-items: center;
+    justify-content: center;
+}
+.title h1{
+    font-size: 4rem;
+    line-height: 0.2;
+}
+.title p{
+    font-size: 1.6rem;
+}
+.nicelinks{
+    display: flex;
+}
+.nicelinks a {
+    --blue: rgb(75, 243, 255);
+    --green: rgb(0, 255, 119);
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+    
+    color: var(--color);
+    background: linear-gradient(90deg,
+    var(--blue), var(--green), var(--blue), var(--green), var(--blue), var(--green), var(--blue), var(--green));
+    background-size: 600% 100%;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nicelinks a:hover {
+    animation: test 10s infinite linear;
+}
+
+@keyframes test {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 0%; }
+}

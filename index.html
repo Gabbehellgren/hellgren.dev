@@ -10,8 +10,11 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="title.css">
 
     <title>hellgren.dev</title>
+    <link rel="icon" type="image/x-icon" href="/logo.png">
 
     <style>
         
@@ -27,15 +30,19 @@
         <a><p>Gallery</p></a>
     </nav>
     <main>
-        <section>
+        <section class="title">
             <h1>hellgren.dev</h1>
             <p>Master the day, shape tomorrow.</p>
-            <a href="home.html">Go to site</a>
         </section>
-    </main>
-    <footer>
+        <section>
+            <h2>News:</h2>
+            <p>[hellgren.dev] Self Hosting</p>
+        </section>
+        <section class="nicelinks">
+            <a>Go to site</a>
+        </section>
 
-    </footer>
+    </main>
     <canvas id="blobCanvas"></canvas>
     <script src="/background.js"></script>
 </body>
