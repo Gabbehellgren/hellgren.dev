@@ -1,13 +1,17 @@
-main section{
+main{
+    width: 100%;
+}
+section{
+    justify-self: center;
     width: 65ch;
-    padding-left: 6%;
-    line-height: 1.8;
 }
-main section h2{
+section h1{
+    margin-bottom: 2rem;
+}
+section h2{
     margin-bottom: 0;
-    line-height: 0.5;
-    margin-top: 30px;
+    line-height: 0;
 }
-main section p{
-    line-height: 1.5;
+section p{
+    line-height: 2;
 }

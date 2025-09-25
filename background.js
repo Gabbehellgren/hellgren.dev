@@ -5,40 +5,49 @@ let w = window.innerWidth;
 let h = window.innerHeight;
 let background = "rgb(5, 5, 5)";
 
-let blobColor = "gray";
-let blobSize = 1;
-let blobVel = 0.1;
-let count = 100;
-let decimals = 5;      // number of decimal places for velocity
-let maximal = false;   // if true, all blobs have same speed
-let sameSpeedDiffDir = false; // if true, same speed but different directions
+let blobColor = "rgba(102, 102, 102, 1)";
+let blobSize = 2.5;
+let blobVel = 0.5;     // max speed
+let count = 250;
+let decimals = 1;      // number of decimal places for velocity
+let direction = 0.1 * Math.PI;  // angle in radians (null = random per blob)
+let sameSpeed = false; // if true, all blobs move with exactly the same speed
 
 // =========================
-// HELPER FUNCTION
+// HELPER FUNCTIONS
 // =========================
 function randomVel(maxVel) {
   let factor = Math.pow(10, decimals);
   return (Math.floor((Math.random() * 2 * maxVel * factor) - maxVel * factor)) / factor;
 }
 
+function randomSpeed(maxVel) {
+  let factor = Math.pow(10, decimals);
+  let speed = Math.floor(Math.random() * maxVel * factor) / factor;
+  return (speed === 0 ? maxVel : speed); // aldrig exakt 0
+}
+
 // =========================
 // BLOB CLASS
 // =========================
 class Blob {
-  constructor(size, maxVel, color) {
+  constructor(size, maxVel, color, direction, sameSpeed) {
     this.size = size;
     this.color = color;
     this.pos = { x: Math.random() * w, y: Math.random() * h };
 
-    if (maximal) {
-      this.vel = { x: maxVel, y: 0 }; // all same speed in x direction
-    } else if (sameSpeedDiffDir) {
-      // random angle but same speed magnitude
-      let angle = Math.random() * 2 * Math.PI;
-      this.vel = { x: maxVel * Math.cos(angle), y: maxVel * Math.sin(angle) };
+    if (direction !== null) {
+      // Alla går åt samma håll
+      let speed = sameSpeed ? maxVel : randomSpeed(maxVel);
+      this.vel = { x: speed * Math.cos(direction), y: speed * Math.sin(direction) };
     } else {
-      // normal random velocity
-      this.vel = { x: randomVel(maxVel), y: randomVel(maxVel) };
+      // Slumpad riktning
+      let vx, vy;
+      do {
+        vx = randomVel(maxVel);
+        vy = randomVel(maxVel);
+      } while (vx === 0 && vy === 0); // se till att inte båda är noll
+      this.vel = { x: vx, y: vy };
     }
   }
 
@@ -78,7 +87,7 @@ canvas.height = h;
 
 const blobs = [];
 for (let i = 0; i < count; i++) {
-  blobs.push(new Blob(blobSize, blobVel, blobColor));
+  blobs.push(new Blob(blobSize, blobVel, blobColor, direction, sameSpeed));
 }
 
 // =========================

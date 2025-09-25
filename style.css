@@ -8,11 +8,15 @@
 html, body {
     margin: 0;
     height: 100%;
+    width: 100%;
     color: var(--color);
     font-family: "Montserrat", sans-serif;
-    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    font-size: large;
 }
-canvas {
+
+#blobCanvas{
     position: fixed;
     transform: translateY(-50%);
     top: 50%;
