@@ -4,6 +4,8 @@
     --inactivelink: rgb(98, 102, 105);
     --layerone: rgb(50, 50, 50);
     --layeroneborder: rgb(75, 75, 75);
+    --blue: rgb(0, 147, 157);
+    --green: rgb(0, 177, 109);
 }
 html, body {
     margin: 0;
