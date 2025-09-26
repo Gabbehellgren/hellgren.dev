@@ -10,7 +10,7 @@ let blobSize = 2;
 let blobVel = 0.2;     // max speed
 let count = 200;
 let decimals = 2;      // number of decimal places for velocity
-let direction = 0.1 * Math.PI;  // angle in radians (null = random per blob)
+let direction = 1/6 * Math.PI;  // angle in radians (null = random per blob)
 let sameSpeed = false; // if true, all blobs move with exactly the same speed
 
 // =========================
