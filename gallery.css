@@ -13,6 +13,8 @@
     overflow: hidden;
     border: 2px solid gray;
     color: var(--color);
+    transition: transform 0.2s ease;
+    text-decoration: none;
 }
 .gallery a span{
     width: 100%;
@@ -23,4 +25,8 @@
 .gallery a div{
     align-content: center;
     padding-left: 0.5em;
+}
+.gallery a:hover{
+    transform: scale(1.1);
+    text-decoration: underline;
 }
