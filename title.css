@@ -12,13 +12,14 @@ section{
 .nicelinks{
     gap: 4em;
     display: flex;
+    position: fixed;
+    bottom: 0.5rem;
+
 }
 .nicelinks a {
     font-size: 1.5rem;
     font-weight: bold;
-    
-    position: relative;
-    top: 12rem;
+
 
 
     border-radius: 50px;

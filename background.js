@@ -6,7 +6,7 @@ let h = window.innerHeight;
 let background = "rgb(5, 5, 5)";
 
 let blobColor = "rgba(102, 102, 102, 1)";
-let blobSize = 1;
+let blobSize = 2;
 let blobVel = 0.2;     // max speed
 let count = 200;
 let decimals = 2;      // number of decimal places for velocity

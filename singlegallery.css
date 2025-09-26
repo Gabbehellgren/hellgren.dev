@@ -1,7 +1,8 @@
 .images{
     display: flex;
     flex-wrap: wrap;
+    gap: 3rem;
 }
 .images img{
-    height: 10rem;
+    height: 15rem;
 }
