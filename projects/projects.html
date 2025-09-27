@@ -11,24 +11,11 @@
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/nav.css">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/gallery.css">
 
     <title>hellgren.dev</title>
-    <link rel="icon" type="image/x-icon" href="/logo.png">
-    
-    <style>
-        .projects{
-            display: flex;
-        }
-        .project{
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .project img{
-            width: 40px;
-            height: 40px;
-        }
-    </style>
+    <link rel="icon" type="image/x-icon" href="/assets/logo.png">
+
 </head>
 <body>
     <nav>
@@ -41,15 +28,9 @@
     <main>
         <section>
             <h1>Projects</h1>
-            <div class="projects">
-
-                <div class="project">
-                    <img src="vega/VEGA3.ico">
-                    <p>VEGA</p>
-                </div>
-
-            </div>
         </section>
+        <section class="gallery">
+            <a href="vega/vega.html" ><span style="background-image: url(vega/VEGA3.ico);"></span><div class="text"><h2>VEGA</h2><p>In development</p></div></a>
     </main>
     <canvas id="blobCanvas"></canvas>
     <script src="/scripts/background.js"></script>

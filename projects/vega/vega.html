@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/main.css">
+
+    <title>hellgren.dev</title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo.png">
+
+</head>
+<body>
+    <nav>
+        <img src="/assets/logo.png">
+        <a href="/about/about.html"><p>About</p></a>
+        <a class="active" href="/projects/projects.html"><p>Projects</p></a>
+        <a href="/downloads/downloads.html"><p>Downloads</p></a>
+        <a href="/gallery/gallery.html"><p>Gallery</p></a>
+    </nav>
+    <main>
+        <section>
+            <h1><img src="VEGA3.ico">VEGA</h1>
+            
+            <p>
+                Type: VPN software<br>
+                Status: In development<br>
+                Developer: Oscar Hellgren<br>
+                Author: Oscar Hellgren<br>
+        </section>
+        <section>
+            <h2 id="abstract">1. Abstract</h2>
+            <h2 id="table">2. Table of contents</h2>
+                <ol>
+                    <li>Abstract</li>
+                    <li>Table of contents</li>
+                    <li>Body
+                        <ul>
+                            <li>Introduction & background</li>
+                            <li>What is a VPN?</li>
+                            <li>Areas of use that are beneficial to me</li>
+                            <li>Why I choosed wireguard</li>
+                            <li>What is wireguard?</li>
+                            <li>Why build my own software?</li>
+                            <li>Development</li>
+                        </ul>
+                    </li>
+                </ol>
+            <h2 id="Body">3. Body</h2>
+                <h3>3.1 Background</h3>
+                <p>It all began when I got the idea that I needed cloudstorage and be able to access my personal files fast where ever I at.
+                    I started to do research on the possible solutions, I then discoverd VPN:S. Imidiatly I started fantasising about the different use cases. 
+                </p>
+                <h3>3.2 What is a VPN?</h3>
+                <p>A VPN or Virtual Encrypted Network, is a sort of "fake" network between the user and server.
+                    This fake network is called a tunnel. The tunnel is private, this means that the tunnel is only used between a user/group of users and the server.
+                    It is also encrypted and this means that the packages or "messeges" are distorted in a specific way and then sent, on recive the message can be decrypted aka the message is returned to it original.
+                    Encrytion is good because you have to have the right "key", "pattern" or "instructions" to decrypt and read it, this means that people that are not ment to access the package can not read it because it is just a distorted mess.
+                    <br>Earlier I said that VPN is a fake network, to explain you can think of your phone.
+                    You search www.hellgren.dev this becomes a request sent to your router (a computer that handles requests and sends information to the right device) the router then give you the data you requested (searched).
+                    It is the same way with VPN:<br><br>
+                    The user requests some data → the request is encrypted → sent to the server → the server decrypts → the server gets the data → encrypts → send to user → user decrypts → the user got the data.
+                </p>
+                <h3>3.3 Areas of use that are beneficial to me</h3>
+                <p>There are multiple uses for 
+
+                    
+                </p>
+                <h3>3.4 Why I choosed wireguard</h3>
+                <h3>3.5 What is wireguard?</h3>
+                <p>
+                WireGuard is a modern, fast, and secure VPN protocol that is designed 
+                to be simpler than traditional solutions like OpenVPN or IPSec. It uses 
+                state-of-the-art cryptography and is built directly into the Linux kernel, 
+                which makes it lightweight and efficient. Unlike older VPNs, WireGuard is easy 
+                to configure and provides high performance with minimal overhead, making it a 
+                popular choice for both personal and enterprise use.
+                Go to <a href="https://www.wireguard.com/" target="_blank">wireguard.com↗</a> for a more information. <br><p class="shaded">(This paragraf was writen by AI)</p>
+                </p>
+                <h3>3.6 Why build my own software?</h3>
+                <h3>3.7 Development</h3>
+                <h2>4. Notes</h2>
+        </section>
+    </main>
+    <canvas id="blobCanvas"></canvas>
+    <script src="/scripts/background.js"></script>
+</body>
+</html><!-- Table of Contents -->

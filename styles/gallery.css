@@ -1,12 +1,12 @@
 .gallery{
     display: flex;
     flex-wrap: wrap;
-    gap: 2em;
+    gap: 2ch;
 }
 .gallery a{
     display: grid;
-    grid-template-rows: 12.5ch auto;
-    grid-template-columns: 20ch;
+    grid-template-rows: 11.8125ch auto;
+    grid-template-columns: 18ch;
     background: rgb(63, 63, 63);
     background-size: 600% 100%;
     border-radius: 20px;
@@ -29,4 +29,11 @@
 .gallery a:hover{
     transform: scale(1.1);
     text-decoration: underline;
+}
+.gallery a h2{
+    font-size: large;
+}
+.text{
+    padding-top: 0.5rem;
+    text-wrap: wrap;
 }

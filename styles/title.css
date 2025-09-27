@@ -1,6 +1,16 @@
 section{
     justify-items: center;
     justify-content: center;
+    text-align: center;
+}
+@media screen and (max-width: 400px) {
+    .title h1{
+        font-size: 2rem;
+    }
+}
+.title h1{
+    font-size: 4rem;
+    line-height: 0.2;
 }
 .title h1{
     font-size: 4rem;
