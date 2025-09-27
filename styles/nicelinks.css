@@ -1,0 +1,41 @@
+.nicelinks{
+    gap: 4em;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0.5rem;
+
+}
+.nicelinks a {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    border-radius: 50px;
+    border: 2px solid slategray;
+
+    text-align: center;
+
+    color: var(--color);
+    background: linear-gradient(90deg,
+    var(--blue), var(--green), var(--blue), var(--green), var(--blue), var(--green));
+    background-size: 600% 100%;
+    min-width: 7em;
+    height: 2em;
+    align-content: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.5s ease;
+}
+
+.nicelinks a:hover {
+    transform: scale(1.1);
+    animation: test 10s infinite linear;
+    text-decoration: underline;
+    border-color:darkgray;
+}
+
+@keyframes test {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 0%; }
+}

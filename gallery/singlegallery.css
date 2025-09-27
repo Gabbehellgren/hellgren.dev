@@ -5,4 +5,36 @@
 }
 .images img{
     height: 15rem;
+    cursor: pointer;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none; /* gömd från början */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.superimage{
+    position: fixed;
+    top: 50%;              /* mitten på höjden */
+    left: 50%;             /* mitten på bredden */
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+@media screen and (orientation: landscape) {
+    .superimage{
+        max-height: 80%;
+        max-width: 90%;
+    }
+}
+@media screen and (orientation: portrait) {
+    .superimage{
+        max-width: 90%;
+    }
 }

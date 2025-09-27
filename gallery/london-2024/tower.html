@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+   <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="../singlegallery.css">
+
+    <title>hellgren.dev</title>
+    <link rel="icon" type="image/x-icon" href="/logo.png">
+
+</head>
+<body>
+    <nav>
+        <img src="/assets/logo.png">
+        <a href="/about/about.html"><p>About</p></a>
+        <a href="/projects/projects.html"><p>Projects</p></a>
+        <a href="/downloads/downloads.html"><p>Downloads</p></a>
+        <a class="active" href="/gallery/gallery.html"><p>Gallery</p></a>
+    </nav>
+    <main>
+        <section>
+            <h1>The tower</h1>
+            <p></p>
+        </section>
+        <section>
+            <div class="images">
+                <img src="the-tower/20241005_093355.jpg" onclick="image(this)">
+                <img src="the-tower/20241005_095936.jpg" onclick="image(this)">
+                <img src="the-tower/20241005_095937.jpg" onclick="image(this)">
+                <img src="the-tower/20241005_095952.jpg" onclick="image(this)">
+                <img src="the-tower/20241005_101521.jpg" onclick="image(this)">
+                <img src="the-tower/20241005_101531.jpg" onclick="image(this)">
+                <img src="the-tower/20241005_101559.jpg" onclick="image(this)">
+                <img src="the-tower/20241005_125411.jpg" onclick="image(this)">
+                <img src="the-tower/20241005_125517.jpg" onclick="image(this)">
+                <img src="the-tower/20241005_125946.jpg" onclick="image(this)">
+                <img src="the-tower/20241005_134545.jpg" onclick="image(this)">
+                <img src="the-tower/20241005_174509.jpg" onclick="image(this)">
+                <img src="the-tower/20241005_174516.jpg" onclick="image(this)">
+                <img src="the-tower/20241005_185402.jpg" onclick="image(this)">
+                <img src="the-tower/20241005_185404.jpg" onclick="image(this)">
+                <img src="the-tower/20241006_112928.jpg" onclick="image(this)">
+                <img src="the-tower/20241006_113432.gif" onclick="image(this)">
+                <img src="the-tower/20241006_114844.jpg" onclick="image(this)">
+            </div>
+        </section>
+    </main>
+    <div class="overlay" id="overlay" onclick="end(event)">
+        <img id="superimage" class="superimage">
+    </div>
+
+    <canvas id="blobCanvas"></canvas>
+    <script src="/scripts/background.js"></script>
+    <script src="/scripts/images.js"></script>
+</body>
+</html>

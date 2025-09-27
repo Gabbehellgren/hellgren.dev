@@ -1,7 +1,8 @@
 import os
 
 # Ange mappens sökväg här
-folder_path = r"london-2024/"
+folder_path = r"gallery\london-2024\tussauds"
+htmlrelative = r"tussauds/"
 
 # Filändelser som räknas som bilder
 image_extensions = {".jpg", ".jpeg", ".png", ".gif", ".bmp", ".webp"}
@@ -11,9 +12,10 @@ files = os.listdir(folder_path)
 
 # Filtrera ut bildfiler
 images = [f for f in files if os.path.splitext(f)[1].lower() in image_extensions]
+images.sort()
 
 # Generera HTML-kod
-html_snippets = [f'<img src="{img}">' for img in images]
+html_snippets = [f'<img src="{htmlrelative}{img}" onclick="image(this)">' for img in images]
 
 # Skriv ut HTML-koden
 for snippet in html_snippets:
