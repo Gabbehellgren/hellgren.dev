@@ -1,8 +1,8 @@
 import os
 
 # Ange mappens sökväg här
-folder_path = r"gallery\london-2024\tussauds"
-htmlrelative = r"tussauds/"
+folder_path = r"gallery\london-2024\tower"
+htmlrelative = r"tower/"
 
 # Filändelser som räknas som bilder
 image_extensions = {".jpg", ".jpeg", ".png", ".gif", ".bmp", ".webp"}
