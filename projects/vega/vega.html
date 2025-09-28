@@ -70,12 +70,28 @@
                     The user requests some data → the request is encrypted → sent to the server → the server decrypts → the server gets the data → encrypts → send to user → user decrypts → the user got the data.
                 </p>
                 <h3>3.3 Areas of use that are beneficial to me</h3>
-                <p>There are multiple uses for 
-
-
+                <p>There are multiple uses for VPN and there are many that could benefit me.
+                    Here I will list some of them:
+                    <ul>
+                        <li>Able to set up private cloudstorage - [Obsolite] I now use github</li>
+                        <li>Accessing and maintaining servers from anywhere - [Very usefull]</li>
+                        <li>Accessing and configuring home network - [Very usefull]</li>
+                        <li>Being able to lan with my friends - [Very usefull]</li>
+                        <li>More secure and private network - [Fine] It is good, but I don't really care</li>
+                        <li>Bypass public networks (schools) firewalls - [Usefull]</li>
+                    </ul>
                 </p>
-                <h3>3.4 Why I choosed wireguard</h3>
-                <h3>3.5 What is wireguard?</h3>
+                <h3>3.4 Why I choosed WireGuard</h3>
+                <p>When I began my "research" I started by trying to set up OpenVPN but it proved to be a hard and slow configuration.
+                    I then did som searching and found that there is many VPN protocols like OpenVPN, IPSec and WireGuard.
+                    I looked in to the options and found that WireGuard unlike the others is really fast, still secure and yet a very simple protocol.
+                    So every fact talked for WireGuard:                    <ol>
+                        <li>Fast</li>
+                        <li>Secure</li>
+                        <li>Easy and fast configuration</li>
+                    </ol>
+                </p>
+                <h3>3.5 What is WireGuard?</h3>
                 <p>
                 WireGuard is a modern, fast, and secure VPN protocol that is designed 
                 to be simpler than traditional solutions like OpenVPN or IPSec. It uses 
@@ -83,11 +99,22 @@
                 which makes it lightweight and efficient. Unlike older VPNs, WireGuard is easy 
                 to configure and provides high performance with minimal overhead, making it a 
                 popular choice for both personal and enterprise use.
-                Go to <a href="https://www.wireguard.com/" target="_blank">wireguard.com↗</a> for a more information. <br><p class="shaded">(This paragraf was writen by AI)</p>
+                Go to <a href="https://www.wireguard.com/" target="_blank">wireguard.com↗</a> for more information. <br><p class="shaded">(This paragraf was writen by AI)</p>
                 </p>
                 <h3>3.6 Why build my own software?</h3>
+                <p>I choosed to build my own software because I wanted to be able to share my VPN with my friends.
+                    But I wanted to control when and how long my "clients" used my VPN.
+                    I want to control because I do not want others to surf on my personal network.
+                    That might have me responsible for what they do on internet.
+                    I want to be able to share my VPN without comprimising myself.
+                    It would also look sleeker way to share the VPN and it would mean that I do not have to share my public IP as much.
+                </p>
                 <h3>3.7 Development</h3>
-                <h2>4. Notes</h2>
+                <p><p>To clairify, I do not intend on making my own VPN protocol. 
+                    Rather VEGA is extra logic that interacts with the WireGuard protocol.</p>
+                    I choosed to develop VEGA in C# because it would be a fun learning experience and I could use Avalonia for a nice GUI.
+                    VEGA is going to be distrubuted here in the download page.
+                </p>
         </section>
     </main>
     <canvas id="blobCanvas"></canvas>
