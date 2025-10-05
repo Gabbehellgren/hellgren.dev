@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root{
+    --color: aliceblue;
+    --inactive: dimgray;
+    --backboard: rgb(15, 15, 15);
+    --darkborder: rgb(25, 25, 25);
+    font-size: large;
+}
+
+#blobCanvas{
+    position: fixed;
+    z-index: -1000;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    
+
+    font-family: Montserrat, Source Code Pro, Fira Code, sans-serif;
+    background-color: black;
+    color: var(--color);
+}
+
+header{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+}
+nav{ 
+    display: flex;
+    padding-inline: 1ch;
+    gap: 2ch;
+    align-items: center;
+    justify-content: space-around;
+}
+nav a img{
+    width: 5rch;
+}
+nav a{
+    color: var(--inactive);
+    cursor: pointer;
+    text-decoration: none;
+}
+nav a:hover{
+    color: var(--color);
+    animation: navLinks 1s ease;
+    text-decoration: underline;
+}
+
+@keyframes navLinks{
+    0% {transform: translateY(0);}
+    25% {transform: translateY(20%);}
+    100% {transform: translateY(0);}
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10rem;
+    min-height: 100%;
+    flex: 1;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    width: 65rch;
+}
+section > h1{
+    font-size: 2.5rem;
+    line-height: 0.5;
+}
+section > h2{
+    line-height: 0;
+    margin-top: 2em;
+}
+section > p{
+    line-height: 1.6;
+}
+
+section > ul, section > ol{
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+section p a, section li a{
+    color: var(--inactive);
+    text-decoration: none;
+}
+
+section p a:hover, section li a:hover{
+    color: var(--color);
+    text-decoration: underline;
+}
+
+section p a::after, section li a::after{
+    content: "↗";
+}
+
+.title{
+    align-items: center;
+}
+.desc{
+    background: var(--backboard);
+    border: 2px solid dimgray;
+    height: fit-content;
+    padding-inline: 2ch;
+    box-sizing: border-box;
+}
+.desc div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    text-wrap: wrap;
+    line-height: 1;
+    grid-auto-flow: column;
+    border-bottom: 2px solid dimgray;
+}
+.desc div a{
+    background: linear-gradient(45deg, darkred 20%, crimson 25%, darkred 30%);
+    background-size: 1000% 100%;
+    align-content: center;
+    width: fit-content;
+    padding-inline: 1em;
+    border-radius: 0.5em;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid brown;
+    color: var(--color);
+}
+.desc div a:hover{
+    text-decoration: underline;
+    animation: button 5s infinite;
+    border: 2px solid indianred;
+}
+
+.nicebuttons{
+    margin-top: 2em;
+    align-self: center;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1em;
+
+}
+
+.nicebuttons a{
+    height: 2em;
+    width: fit-content;
+    padding-inline: 1em;
+    align-content: center;
+    color: var(--color);
+    text-decoration: none;
+
+    border-radius: 0.5rem;
+    background: linear-gradient(45deg, darkred 20%, crimson 25%, darkred 30%);
+    border: 2px solid brown;
+    background-size: 1000% 100%;
+    transition: transform 0.2s ease;
+}
+
+.nicebuttons a:hover{
+    animation: button 5s infinite;
+    border-color: indianred;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+@keyframes button{
+    from {background-position: left;}
+    to {background-position: right;}
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: repeat(4, auto);
+    gap: 2ch;
+}
+.projects a{
+    background-color: var(--backboard);
+    border: 2px solid var(--darkborder);
+    display: grid;
+    grid-template-columns: 4ch minmax(auto, 50ch) 4ch;
+    align-items: center;
+    line-height: 1;
+    border-radius: 2rem;
+}
+.projects a:hover{
+    border-color: var(--inactive);
+    border-style: dashed;
+}
+.projects a img{
+    justify-self: center;
+    width: 3ch;
+}
+.projects a p{
+    margin-right: 3ch;
+}
+
+@media screen and (max-width: 75ch) {
+    :root{
+        font-size: medium;
+    }
+    body{
+    gap: 2rem;
+
+
+
+    }
+    nav{
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    section{
+        width: 90%;
+    }
+
+    .desc{
+        max-width: 90%;
+    }
+    .desc div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+@media screen and (max-width: 60ch) {
+    .projects{
+        grid-template-columns: 1fr;
+    }
+}
+}
+@media screen and (max-width: 40ch) {
+    :root{
+        font-size: small;
+    }
+
+}
+@media screen and (max-width: 32ch) {
+    :root{
+        font-size: x-small;
+    }
+}

@@ -1,0 +1,16 @@
+.indicator{
+    justify-self: center;
+    width: 1ch;
+    height: 1ch;
+    background: tan;
+    border: 2px solid rgb(129, 110, 85);
+    border-radius: 50%;
+}
+.idea{
+    background-color: violet;
+    border-color: blueviolet;
+}
+.waiting{
+    background-color:darkkhaki;
+    border-color: orange;
+}
