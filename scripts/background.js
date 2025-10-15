@@ -3,15 +3,15 @@
 // =========================
 let w = window.innerWidth;
 let h = window.innerHeight;
-let background = "rgb(5, 5, 5)";
+let background = "rgb(6, 6, 6)";
 
-let blobColor = "rgba(102, 102, 102, 1)";
-let blobSize = 3;
-let blobVel = 0.2;     // max speed
-let count = (w*h)/100 * 1/200;
-let decimals = 2;      // number of decimal places for velocity
+let blobColor = "rgba(255, 255, 255, 0.6)";
+let blobSize = 2;
+let blobVel = 0.05;     // max speed
+let count = 50;
+let decimals = 0;      // number of decimal places for velocity
 let direction = 1/6 * Math.PI;  // angle in radians (null = random per blob)
-let sameSpeed = false; // if true, all blobs move with exactly the same speed
+let sameSpeed = true; // if true, all blobs move with exactly the same speed
 
 // =========================
 // HELPER FUNCTIONS
