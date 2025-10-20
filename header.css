@@ -4,7 +4,7 @@ header{
     grid-template-rows: 2em;
     align-items: center;
     align-content: center;
-    height: auto;
+    height: fit-content;
     padding-right: 2ch;
     padding-block: 1em;
     margin-bottom: 3em;
@@ -39,7 +39,7 @@ nav *{
     header{
         padding-top: 1em;
         grid-template-columns: 1fr;
-        grid-template-rows: 2em 2em;
+        grid-template-rows: 4em 2em;
         justify-items: center;
     }
     header > div{
