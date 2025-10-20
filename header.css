@@ -4,9 +4,10 @@ header{
     grid-template-rows: 2em;
     align-items: center;
     align-content: center;
-    gap: 1ch;
+    height: auto;
     padding-right: 2ch;
     padding-block: 1em;
+    margin-bottom: 3em;
 }
 header > div{
     display: grid;
