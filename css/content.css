@@ -33,6 +33,11 @@ aside{
     color: lightgray;
     padding-right: 1ch;
 }
+aside img{
+    margin: 0;
+    max-width: 90%;
+    max-height: 20ch;
+}
 ul, ol{
     margin: 0;
 }
