@@ -63,9 +63,14 @@ ul, ol{
         height: 5ch;
     }
     section p{
-        font-size: smaller;
+        font-size: small;
     }
     main{
         grid-template-rows: minmax(15vh, auto);
+    }
+    .infocontainer{
+        grid-auto-columns: 1fr;
+        grid-auto-rows: auto;
+        background: red;
     }
 }
