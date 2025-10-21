@@ -4,77 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/nav.css">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/content.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/thumb.css">
 
-    <title>hellgren.dev</title>
-    <link rel="icon" type="image/x-icon" href="assets/logo.png">
-
+    <title>template</title>
 </head>
 <body>
-    <nav>
-        <img src="/assets/logo.png">
-        <a class="active" href="/about/about.html"><p>About</p></a>
-        <a href="/projects/projects.html"><p>Projects</p></a>
-        <a href="/downloads/downloads.html"><p>Downloads</p></a>
-        <a href="/gallery/gallery.html"><p>Gallery</p></a>
-    </nav>
-
+    <header>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a class="active" href="/about/about.html">About</a>
+        </nav>
+        <div>
+            <h2>hellgren.dev</h2>
+            <img src="/assets/logo.png">
+        </div>
+    </header>
     <main>
         <section>
-            <h1>Welcome!</h1>
-            <h2>About</h2>
-            <p>
-                This is my personal site. 
-                Here I will distrubate and share my projects, talk about my ideas and showcase my skills.
-                My site features:
-                <ul>
-                    <li>Projects - here you can read all about my projects.</li>
-                    <li>Downloads - download my digital content.</li>
-                    <li>Gallery - the gallery contains photos from vacations, competisions etc.</li>
-                </ul>
+            <h1>About</h1>
+            <img src="/assets/logo.png">
+            <p>My contacts:</p>
+            <div class="infocontainer">
+                <div>
+                    <p>Email:</p>
+                    <p>oscar.hellgren2007@gmail.com</p>
+                </div>
+                <div>
+                    <p>Discord:</p>
+                    <p>gabbehellgren</p>
+                </div>
+            </div>
+            <p>Here I will write about my website and I will tell you some about myself.</p>
+        </section>
+        <article>
+            <h1>hellgren.dev</h1>
+            <p>This site is my personal site. It will be used as a portfolio and a way to showcase my projects, ideas and skills.
+                I will alse share photos from diffrent vacations in the gallery tab.
+                Projects will organize all my projects in one place and will have descriptions on what they are much more.
+                You can download my digital contents from the download page... yeah.
+                I hope you enjoy my site.
             </p>
 
-        </section>
-        <section>
-            <h2>Who I am</h2>
-            <p>Hi, my name is Oscar.
-                I was born in 2007 in Sweden, where I live.
-                I grew up with my dad Janne and mom Julia, who lived with me, but I also have a half-brother.
-                Since 2023, I have also been with my lovely girlfriend, Elsa.
-                In 2024, I moved out and changed cities to a much bigger one, a 50-minute car ride away.
-                There, I moved into a large one-room apartment, which is where I currently live.
-            <p>
-                As of today, I am attending my senior year of high school.
-                After high school, I want to continue my studies at university with the intention of becoming an engineer.
-                I also aspire to create my own company.
-                Currently, I am not fluent in any programming language, but I am pretty confident in a few.
-                These are:
-
-                <ul>
-                    <li>Python</li> 
-                    <li>C-sharp (C#)</li> 
-                    <li>HTML and CSS</li> 
-                </ul>
+            <h1>About me</h1>
+            <p>Hi my name is Oscar! I am the owner, designer and programmer of this site.
+                I was born in Sweden 2007 and currently attending my last year of highschool. 
+                After highschool I want to continue my studies at universety, I am thinking of getting a master degree.
             </p>
-            <p>
-                In my free time, I like to train, code, design, and engineer. 
-                I train and compete in canoeing. 
-                Training is something I do regularly; on a normal school week, I work out about 8–10 times.
-                I usually train with my girlfriend. 
-                I have competed a few times internationally and hope that one day I will compete at the Olympics. 
-                In 2026, I will officially become a senior and compete at that level.
+            <p>In my free time I like to engineer, coding and designing. Something I also like very much is to train! 
+                My main sport is canoing but I also do other sports such as climbing and cross-country skiing.
+                I train alot and I have competed internationaly against our nordic neighbors. 
+                I hope one day being able to compete in the olympics.
             </p>
-            <p>
-                Hope you found my story entertaining!
-            </p>
-        </section>
-        <div style="height: 100px;"></div>
+            <aside>
+                <img src="me-canoing.something"><!--EDIT HERE!!!!-->
+            </aside>
+            <p>Now I have told a little about me.</p>
+        </article>
     </main>
     <canvas id="blobCanvas"></canvas>
     <script src="/scripts/background.js"></script>

@@ -1,0 +1,72 @@
+header{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 2em;
+    align-items: center;
+    align-content: center;
+    height: fit-content;
+    padding-right: 2ch;
+    padding-block: 1em;
+    margin-bottom: 3em;
+}
+header > div{
+    display: grid;
+    grid-template-columns: 20em 3em;
+    gap: 1ch;
+    align-items: center;
+    justify-content: end;
+}
+header > div > img{
+    width: 100%;
+}
+header > div > h2{
+    text-align: end;
+    font-size: 2em;
+}
+nav{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+}
+nav *{
+    width: 10ch;
+    line-height: 2;
+    font-size: large;
+}
+
+@media (width < 115rch){
+    header{
+        padding-top: 1em;
+        grid-template-columns: 1fr;
+        grid-template-rows: 4em 2em;
+        justify-items: center;
+    }
+    header > div{
+        grid-template-columns: 3em 12em;
+    }
+    header > div > img{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    header > div > h2{
+        text-align: start;
+    }
+    nav{
+        grid-row: 2;
+        text-align: center;
+    }
+    nav::before, nav::after{
+        content: "⚊";
+    }
+}
+
+@media (width < 65rch) {
+    nav{
+        flex-wrap: wrap;
+        justify-content: center
+    }
+    nav::before, nav::after{
+        content: "";
+    }
+}
