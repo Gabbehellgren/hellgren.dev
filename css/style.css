@@ -4,51 +4,175 @@ body{
     background-color: black;
     color: azure;
     font-family: montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-inline: 20px;
 }
-
 
 header{
     display: grid;
-    grid-template-columns: auto auto;
-    height: auto;
-    background: red;
-}
-header *{
-    line-height: 1;
-    margin: 0;
-    align-self: center;
-}
-header div{
-    justify-self: end;
-    display: grid;
-    grid-template-columns: auto 5ch;
-}
-header nav{
-    display: grid;
-    grid-auto-columns: auto;
-}
-header div img{
-    width: 100%
+    grid-template-columns: 1fr 20ch;
+    width: 100%;
 }
 
-@media (width < 80rch) {
+header > nav{
+    display: flex;
+    column-gap: 1.2ch;
+    align-items: center;
+    font-size: 1.2rem;
+}
+header > nav > * {
+    color: darkgray;
+    text-decoration: none;
+    animation: wiggle 30s ease infinite;
+    animation-delay: var(--delay, 0s);
+}
+@keyframes wiggle{
+    98%{transform: translateY(0);}
+    99%{transform: translateY(-25%);}
+    100%{transform: rotate(0deg);}
+}
+header > nav > a:nth-child(2) {--delay: 159ms}
+header > nav > a:nth-child(3) {--delay: 300ms}
+header > nav > a:nth-child(4) {--delay: 450ms}
+header > nav > a:nth-child(5) {--delay: 600ms}
+
+header > nav > a{
+    transition: transform 1s ease;
+}
+header > nav > .active{
+    color: azure;
+    animation: none;
+    pointer-events: none;
+}
+header > nav > a:hover{
+    transform: scale(1.1);
+    color: azure
+}
+
+header > div{
+    justify-self: right;
+    display: grid;
+    grid-template-columns: 20ch 3em;
+    align-items: center;
+    background-size: cover;
+}
+
+header > div > *{
+    width: 100%;
+}
+
+@media screen and (width < 90rch){
     header{
-        background-color: hotpink;
-        display: grid;
         grid-template-columns: 1fr;
-        grid-auto-rows: auto;
+        justify-items: center;
     }
-    header *{
+    header > nav::before, header > nav::after{
+        content: "-";
+    }
+    header > div{
         justify-self: center;
-    }
-    header div{
         grid-row: 1;
-        justify-self: center;
+    }
+
+
+    @media screen and (width < 60rch) {
+        header > nav::before, header > nav::after{
+            content: none;
+        }
+        header > nav{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+        }
+        header > div{
+            grid-template-columns: 1fr;
+        }
+        header > div > img{
+            position: fixed;
+            opacity: 0;
+        }
+        header > div > h1{
+            justify-items: center;
+        }
+
+
+        @media screen and (width < 35rch) {
+            header > nav{
+               grid-template-columns: 1fr;
+            }
+            header > div{
+                grid-template-columns: 10rch;
+            }
+            header > div > img{
+                position: static;
+                opacity: 1;
+            }
+            header > div > h1{
+                position: fixed;
+                opacity: 0;
+            }
+        }
     }
 }
+
 
 main{
-    background-color: green;
-    min-height: 20rem;
+    display: grid;
+    grid-template-rows: 25vh;
+    width: 100%;
+}
+article{
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: 1fr 65rch 1fr;
+    grid-auto-rows: auto;
+}
+article > *{
+    grid-column: 2;
+    margin: 0;
+}
+article h1{
+    font-size: 2rem;
+
+}
+article a{
+    color: gray;
+    text-decoration: underline dotted;
+}
+article a::after{
+    content: " ↗";
+}
+article a:hover{
+    color: azure;
+}
+aside{
+    color: darkgray;
+    grid-column: 3;
+    font-size: small;
+    padding: 1ch;
+    max-width: 30rch;
+
+}
+@media screen and (width < 82rch) {
+    aside{
+        grid-column: 2;
+
+    }
+    aside::before{
+        content: "↳ ";
+        position: relative;
+        top: -0.25em
+    }
 }
 
+@media screen and (width < 70rch){
+    article{
+        justify-self: center;
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+    @media screen and (width < 50rch) {
+        :root{
+            font-size: small;
+        }
+    }
+}
