@@ -1,0 +1,18 @@
+.sectionBorder{
+    border: 2px solid rgb(40, 40, 40);
+    border-radius: 1rem;
+    background-color: rgb(18, 18, 18);
+    color: lightgray;
+}
+.titleScreen{
+    justify-items: center;
+    align-content: center;
+}
+.titleScreen h1{
+    font-size: 4.5rem;
+    margin-bottom: 0.2em;
+}
+.titleScreen p{
+    margin-top: 0;
+    font-size: 1.2rem;
+}
