@@ -11,6 +11,7 @@ header{
     display: grid;
     grid-template-columns: 1fr 20ch;
     width: 100%;
+    padding-bottom: 3rch;
 }
 
 header > nav{
@@ -117,8 +118,18 @@ header > div > *{
 
 main{
     display: grid;
-    grid-template-rows: 25vh;
-    width: 100%;
+    grid-template-rows: minmax(32vh, auto);
+    grid-template-columns: 1fr;
+}
+section{
+    width: 65rch;
+    justify-self: center;
+}
+section > *{
+    grid-column: 2;
+}
+section h1{
+    font-size: 2.5rem;
 }
 article{
     grid-row-start: 2;
@@ -134,9 +145,12 @@ article h1{
     font-size: 2rem;
 
 }
+article p{
+    line-height: 1.5;
+}
 article a{
     color: gray;
-    text-decoration: underline dotted;
+    text-decoration: underline dotted 2.25px;
 }
 article a::after{
     content: " ↗";
@@ -152,7 +166,7 @@ aside{
     max-width: 30rch;
 
 }
-@media screen and (width < 82rch) {
+@media screen and (width < 105rch) {
     aside{
         grid-column: 2;
 
@@ -160,12 +174,12 @@ aside{
     aside::before{
         content: "↳ ";
         position: relative;
-        top: -0.25em
+        top: -0.3em
     }
 }
 
 @media screen and (width < 70rch){
-    article{
+    article, section{
         justify-self: center;
         grid-template-columns: 1fr;
         width: 90%;
