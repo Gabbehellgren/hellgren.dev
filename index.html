@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/section.css">
 
-    <meta name="description" content="My personal website dedicated to showcase my own greatness.">
-
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/nav.css">
-    <link rel="stylesheet" href="/css/content.css">
-    <link rel="stylesheet" href="/css/title.css">
-
-    <title>Welcome to hellgren.dev!</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <a class="active">Home</a>
-            <a href="/about/about.html">About</a>
-        </nav>
-        <div>
-            <h2>hellgren.dev</h2>
-            <img src="/assets/logo.png">
-        </div>
-    </header>
-    <main>
-        <section>
-            <h1>Master the day, shape tomorrow.</h1>
-            <p>Welcome to my personal site!</p>
-        </section>
-        <article>
-            <h2>News:</h2>
-            <p>Website now self-hosting! [hellgren.dev]<p>
-            <p>New theme done, more comming <strong>soon</strong>. [hellgren.dev]</p>
-        </article>
-    </main>
-    <canvas id="blobCanvas"></canvas>
-    <script src="/scripts/background.js"></script>
-</body>
+        <title>Title</title>
+        <link rel="icon" href="/assets/logo.png">
+    </head>
+    <body>
+        <p style="position:fixed; color: dimgray; font-size: xx-small;" id="time"></p>
+        <header>
+            <nav>
+                <a href="/devtools/template-article.html">Article</Article></a>
+                <a href="/devtools/template-section.html">Section</a>
+                <a href="" class="active">Title</a>
+                <a href="">Downloads</a>
+                <a href="">Gallery</a>
+            </nav>
+            <div>
+                <h1>hellgren.dev</h1>
+                <img src="/assets/logo.png">
+            </div>
+        </header>
+        <main>
+            <section class="titleScreen">
+                <h1>Master the day, shape tomorrow.</h1>
+                <p>Welcome to my personal site!</p>
+            </section>
+            <article class="centerArticle">
+                <h2>Changes:</h2>
+                <p>New theme! [hellgren.dev]</p>
+                <aside><p>Please wait 30s and look att header. There is a timer in the corner</p></aside>
+            </article>
+        </main>
+        <script src="/time.js"></script>
+    </body>
 </html>
