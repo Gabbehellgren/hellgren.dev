@@ -1,0 +1,68 @@
+
+:root{
+    --shadow_vertical: 0px;
+    --shadow_color: #b2deff;
+}
+
+header{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    line-height: 1;
+    height: 4em;
+}
+
+
+
+.name_icon, nav{
+    align-items: center;
+    padding-inline: 2ch;
+}
+
+
+
+.name_icon{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 1ch;
+}
+.name_icon h1{
+    margin: 0;
+}
+.name_icon img{
+    height: 2em;
+}
+
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+    font-weight: 500;
+}
+nav a{
+    color: gray;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    padding: 0.3em 0;
+    text-decoration: none;
+    padding-inline: 1ch;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+}
+nav a:hover{
+    animation: BG 0.2s ease;
+    color: var(--text_color);
+    background-color: var(--text_color);
+    color: black;
+}
+nav .active{
+    pointer-events: none;
+    background: var(--text_color);
+    color: black;
+}
+@keyframes BG{
+    from{background-color: black; color: var(--text_color);}
+    to{background-color: var(--text_color); color: black;}
+}
