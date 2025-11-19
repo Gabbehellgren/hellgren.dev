@@ -1,0 +1,95 @@
+header{
+    display: grid;
+    grid-template-columns: 1fr 20ch;
+    width: 100%;
+    padding-bottom: 3rch;
+}
+
+header > nav{
+    display: flex;
+    column-gap: 1.2ch;
+    align-items: center;
+    font-size: 1.2rem;
+}
+header > nav > * {
+    color: darkgray;
+    text-decoration: none;
+}
+header > nav > a{
+    transition: transform 0.2s ease;
+}
+header > nav > .active{
+    color: azure;
+    animation: none;
+    pointer-events: none;
+}
+header > nav > a:hover{
+    transform: scale(1.1);
+    color: azure
+}
+
+header > div{
+    justify-self: right;
+    display: grid;
+    grid-template-columns: 20ch 3em;
+    align-items: center;
+    background-size: cover;
+}
+
+header > div > *{
+    width: 100%;
+}
+
+@media screen and (width < 90rch){
+    header{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    header > nav::before, header > nav::after{
+        content: "-";
+    }
+    header > div{
+        justify-self: center;
+        grid-row: 1;
+    }
+
+
+    @media screen and (width < 60rch) {
+        header > nav::before, header > nav::after{
+            content: none;
+        }
+        header > nav{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+        }
+        header > div{
+            grid-template-columns: 1fr;
+        }
+        header > div > img{
+            position: fixed;
+            opacity: 0;
+        }
+        header > div > h1{
+            justify-items: center;
+        }
+
+
+        @media screen and (width < 35rch) {
+            header > nav{
+               grid-template-columns: 1fr;
+            }
+            header > div{
+                grid-template-columns: 10rch;
+            }
+            header > div > img{
+                position: static;
+                opacity: 1;
+            }
+            header > div > h1{
+                position: fixed;
+                opacity: 0;
+            }
+        }
+    }
+}
