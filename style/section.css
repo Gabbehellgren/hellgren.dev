@@ -1,0 +1,7 @@
+.infocontainer{
+    grid-template-columns: 1fr 1fr;
+    font-size: small;
+}
+.infocontainer .info:nth-of-type(even){
+    grid-column: 2;
+}

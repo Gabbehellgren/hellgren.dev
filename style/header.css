@@ -8,7 +8,7 @@ header{
     display: grid;
     grid-template-columns: min-content 1fr;
     line-height: 1;
-    height: 4em;
+    height: 5em;
 }
 
 
@@ -29,7 +29,7 @@ header{
     margin: 0;
 }
 .name_icon img{
-    height: 2em;
+    height: 3em;
 }
 
 
