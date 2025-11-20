@@ -1,7 +1,19 @@
 .infocontainer{
+    display: grid;
     grid-template-columns: 1fr 1fr;
     font-size: small;
 }
 .infocontainer .info:nth-of-type(even){
     grid-column: 2;
+    border-left: 2px solid gray;
+}
+.info{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 1ch;
+    align-items: center;
+    padding-inline: 1ch;
+}
+.info *{
+    display: inline;
 }

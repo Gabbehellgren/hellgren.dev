@@ -43,3 +43,11 @@ main > div{
 h1{
     font-size: 2.2rem;
 }
+
+main a{
+    color: gray;
+}
+main a:hover{
+    color: var(--text_color);
+    text-decoration: underline solid;
+}
