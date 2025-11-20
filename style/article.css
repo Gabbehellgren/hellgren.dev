@@ -4,8 +4,8 @@ article, section{
 }
 article{
     display: grid;
-    grid-template-columns: 65ch 35ch;
-    gap: 0;
+    grid-template-columns: 65ch 1fr;
+    align-items: stretch;
 }
 article > *{
     grid-column: 1;
@@ -13,8 +13,4 @@ article > *{
 aside{
     grid-column: 2;
     color: gray;
-    font-size: small;
-}
-aside img{
-    height: 100%;
 }

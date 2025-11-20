@@ -43,9 +43,18 @@ main > div{
 h1{
     font-size: 2.2rem;
 }
+p{
+    line-height: 1.5;
+}
 
+
+
+.external::after{
+    content: "🔗";
+}
 main a{
     color: gray;
+    text-decoration: none;
 }
 main a:hover{
     color: var(--text_color);
