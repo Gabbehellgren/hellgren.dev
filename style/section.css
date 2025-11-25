@@ -19,7 +19,6 @@ section{
     grid-column-gap: 1ch;
     align-items: center;
     max-width: 1fr;
-    width: auto;
 }
 .info *{
     display: inline;

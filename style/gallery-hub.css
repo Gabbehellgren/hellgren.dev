@@ -1,0 +1,25 @@
+.gallery-hub{
+    width: 65ch;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.gallery-hub :nth-child(even){
+    grid-column: 2;
+}
+
+
+.album{
+    background-color: dimgray;
+    display: grid;
+    height: calc((65ch/2)*3/4);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr min-content;
+}
+.album img{
+    display: block;
+    width: 100%;
+}
+.album div{
+    display: flex;
+}

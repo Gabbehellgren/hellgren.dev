@@ -23,6 +23,8 @@ header{
     display: grid;
     grid-template-columns: auto auto;
     grid-column-gap: 1ch;
+    color: var(--text_color);
+    text-decoration: none;
 }
 .name_icon h1{
     margin: 0;
@@ -45,7 +47,7 @@ nav a{
     transition: transform 0.2s ease;
     padding: 0.3em 0;
     text-decoration: none;
-    padding-inline: 1ch;
+    padding-inline: 0.5ch;
     border-radius: 20px;
     font-weight: 600;
     transition: background-color 0.2s, color 0.2s;
